@@ -1,0 +1,35 @@
+{
+  "injection_cases": 1272,
+  "injection_domains": [
+    "ecommerce",
+    "education",
+    "healthcare",
+    "hr",
+    "insurance",
+    "it_helpdesk",
+    "legal",
+    "logistics",
+    "real_estate"
+  ],
+  "cuad_documents": 510,
+  "csv_rows": {
+    "Founders and Board Members.csv": 382,
+    "Acquiring Tech Companies.csv": 36,
+    "Acquired Tech Companies.csv": 1610,
+    "Acquisitions.csv": 1643
+  },
+  "integrity": {
+    "agent-indirect-prompt-injection": {
+      "sha256_matches": true,
+      "files_match": true
+    },
+    "cuad": {
+      "sha256_matches": true,
+      "files_match": true
+    },
+    "technology-mergers-acquisitions": {
+      "sha256_matches": true,
+      "files_match": true
+    }
+  }
+}

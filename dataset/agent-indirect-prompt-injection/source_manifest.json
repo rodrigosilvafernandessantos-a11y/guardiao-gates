@@ -1,0 +1,42 @@
+{
+  "source_url": "https://huggingface.co/datasets/nvidia/Nemotron-RL-Agentic-Indirect-Prompt-Injection-v1",
+  "source_revision_sha": "d738d4f361cc38bb4d7a42b9066776dade5332f5",
+  "source_last_modified": "2026-06-04T05:06:16Z",
+  "source_creation_date_per_readme": "2026-04-01 (README states 04/01/2026)",
+  "version": "Nemotron-RL-Agentic-Indirect-Prompt-Injection-v1",
+  "license": "cc-by-4.0 (Hugging Face card metadata); README text: 'This dataset is licensed under Creative Commons Attribution 4.0 International (CC-BY 4.0).'",
+  "kaggle_license": "CC-BY-4.0",
+  "retrieved_at": "2026-10-05T11:49:59Z",
+  "source_files": [
+    {
+      "path": "train.jsonl",
+      "bytes": 11703379,
+      "sha256": "3329da17564a7eb287e2730fc7d6956e1f4fe51e8950ac4f110b3c37e78cf3b9"
+    },
+    {
+      "path": "README.md",
+      "bytes": 13239,
+      "sha256": "0386806252047746e06cba58bba3f91905aa02ccdd4def963022440e6d5de851"
+    }
+  ],
+  "upload_files": [
+    {
+      "path": "train.jsonl",
+      "bytes": 11703379,
+      "sha256": "3329da17564a7eb287e2730fc7d6956e1f4fe51e8950ac4f110b3c37e78cf3b9",
+      "note": "byte-identical to source train.jsonl"
+    },
+    {
+      "path": "cases.parquet",
+      "bytes": 610622,
+      "sha256": "842a172944fb1f509c1aa2e20832d34ad8f51aa4326f3638f31f06b4a055c77f",
+      "note": "derived: flattened scalar columns + JSON-string nested objects; round-trip verified lossless against train.jsonl"
+    },
+    {
+      "path": "data_dictionary.csv",
+      "bytes": 4664,
+      "sha256": "a7654ec0fcd3c780866e72375304538a419c98538583c99a4c7ce447c0d2b90d",
+      "note": "authored"
+    }
+  ]
+}
