@@ -26,6 +26,8 @@ Data: 17/11/2026. Este registro descreve a organização de `guardiao-gate`, nã
 
 ## Próxima etapa técnica
 
+O [roadmap do notebook](roadmap-notebook.md), elaborado em 17/11/2026, organiza as atividades abaixo em entregas e critérios de avanço. É um plano; a implementação e os resultados continuam pendentes.
+
 - Fixar uma versão executável da política e seus esquemas.
 - Separar D01–D07 e as vinte variantes dos textos de orientação ao avaliador.
 - Converter estados, papéis, aprovações e casos em arquivos carregáveis.

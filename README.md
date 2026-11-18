@@ -11,6 +11,7 @@ Projeto acadêmico IBMEC sobre controle de ações, riscos e responsabilidades d
 3. [Índice completo da documentação](docs/README.md).
 4. [Catálogo de dados e proveniência](data/README.md).
 5. [Organização e regras de nomes](docs/organizacao/estrutura-e-convencoes.md).
+6. [Roadmap de construção do notebook experimental](docs/planejamento/roadmap-notebook.md).
 
 ## Estrutura
 
