@@ -1,0 +1,43 @@
+{
+  "repository": "guardiao-gate",
+  "organization_date": "2026-11-17",
+  "raw_data_git_tracked": false,
+  "datasets": [
+    {
+      "source_ref": "yashdogra/agent-indirect-prompt-injection-cases",
+      "source_url": "https://www.kaggle.com/datasets/yashdogra/agent-indirect-prompt-injection-cases",
+      "original_folder": "agent-indirect-prompt-injection",
+      "local_path": "data/raw/indirect-prompt-injection",
+      "archive_path": "data/raw/indirect-prompt-injection/original.zip",
+      "archive_sha256_expected": "144cf097d860c78851345a93d9f599606ca0dfd42b4004cf4ea20af12cf8cadd",
+      "archive_sha256_copied": "144cf097d860c78851345a93d9f599606ca0dfd42b4004cf4ea20af12cf8cadd",
+      "archive_bytes": 1353029,
+      "download_date_original": "2026-11-14",
+      "original_manifest": "data/provenance/download-manifest.original.json"
+    },
+    {
+      "source_ref": "konradb/atticus-open-contract-dataset-aok-beta",
+      "source_url": "https://www.kaggle.com/datasets/konradb/atticus-open-contract-dataset-aok-beta",
+      "original_folder": "cuad",
+      "local_path": "data/raw/cuad",
+      "archive_path": "data/raw/cuad/original.zip",
+      "archive_sha256_expected": "ec5b9751cb1b246eda584272d5420ab79c4ec70c018bda90aac905a9d1504de4",
+      "archive_sha256_copied": "ec5b9751cb1b246eda584272d5420ab79c4ec70c018bda90aac905a9d1504de4",
+      "archive_bytes": 107396194,
+      "download_date_original": "2026-11-14",
+      "original_manifest": "data/provenance/download-manifest.original.json"
+    },
+    {
+      "source_ref": "joebeachcapital/technology-mergers-and-acquisitions",
+      "source_url": "https://www.kaggle.com/datasets/joebeachcapital/technology-mergers-and-acquisitions",
+      "original_folder": "technology-mergers-acquisitions",
+      "local_path": "data/raw/technology-ma",
+      "archive_path": "data/raw/technology-ma/original.zip",
+      "archive_sha256_expected": "d7cfd565d5a89bdaaac1a25fab1cedbc5851674b7e59d9431ea76eea0d74bab8",
+      "archive_sha256_copied": "d7cfd565d5a89bdaaac1a25fab1cedbc5851674b7e59d9431ea76eea0d74bab8",
+      "archive_bytes": 652266,
+      "download_date_original": "2026-11-14",
+      "original_manifest": "data/provenance/download-manifest.original.json"
+    }
+  ]
+}

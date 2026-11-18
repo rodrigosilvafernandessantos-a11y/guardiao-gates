@@ -1,0 +1,9 @@
+* text=auto
+*.md text eol=lf
+*.csv text eol=lf
+*.json text eol=lf
+*.docx -text
+*.pptx -text
+*.pdf -text
+*.zip -text
+*.parquet -text
