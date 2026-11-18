@@ -1,6 +1,6 @@
 # Preparação para o item 3 — revisão do pesquisador
 
-Data: 17/11/2026. Estado: aguardando aprovação. O núcleo offline, as ferramentas simuladas e o controlador ainda não foram construídos. Nenhuma chamada ao JEV real ou execução do experimento foi feita.
+Registro de preparação de 17/11/2026, preservado como histórico. Atualização em 18/11/2026: o pesquisador autorizou o item 3, agora implementado. Veja o [núcleo offline](../especificacao/nucleo-offline.md) e o [protocolo atual](protocolo-experimental.md). As seções abaixo descrevem a proposta e verificações anteriores à autorização, não o estado atual.
 
 ## O que foi corrigido
 
@@ -41,6 +41,6 @@ Condições com/sem controlador, quantidade final de sessões, limites da execu�
 ## Arquivos para revisar
 
 - [Contrato JEV-1.0](../especificacao/contrato-jev.md): campos, significado dos sinais, critérios e limites.
-- [Protocolo v0.3](protocolo-experimental.md): foco confirmado, contrato candidato e escopo da aprovação.
+- [Protocolo v0.3](protocolo-experimental-v0.3.md): foco confirmado, contrato candidato e escopo da aprovação.
 - [Configuração JEV](../../config/jev-1.0.json): parâmetros canônicos e estado de aprovação.
 - [Guia dos dados](../../data/cases/README.md): estrutura, carregamento e verificações.

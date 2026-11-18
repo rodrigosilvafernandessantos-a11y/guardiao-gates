@@ -55,7 +55,7 @@ S: timeout de aprovação = 30 segundos, classificador = 5 segundos e ferramenta
 
 ### 6.2 Entradas e falhas
 
-O formato da reconstrução está formalizado no [contrato candidato JEV-1.0](contrato-jev.md), com esquemas e perfis completos, aguardando aprovação do pesquisador. Essa proposta não altera a tabela de resultados esperados abaixo nem comprova validação de domínio.
+O formato da reconstrução está formalizado no [contrato JEV-1.0](contrato-jev.md), com esquemas e perfis completos, autorizado para construção offline em 18/11/2026. Essa proposta não altera a tabela de resultados esperados abaixo nem comprova validação de domínio.
 
 - Todos os argumentos são strings não vazias; rejeitar chaves extras, nulos, listas ou coerção automática de tipos. `assunto`: até 160 caracteres; `corpo`: até 4.000; `nome`, `cliente` e `sistema`: listas fechadas. Limites são S.
 - Clientes permitidos para PRECO em S07: `CLI-001`, `CLI-002`, `CLI-003`, `CLI-004`. Sistema permitido: `ERP-HZ-HOMOLOG`. Cada pedido deve ter mandato explícito separado de documento lido.

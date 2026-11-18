@@ -1,8 +1,8 @@
-# Contrato JEV-1.0 — candidato para aprovação
+# Contrato JEV-1.0 — uso offline autorizado
 
-Data: 17/11/2026. Situação: definido tecnicamente para revisão do pesquisador; ainda não aprovado para iniciar o item 3. Revisão humana de domínio pendente. Nenhuma execução do agente ou do classificador real realizada.
+Definido em 17/11/2026; uso na construção offline autorizado pelo pesquisador em 18/11/2026. Revisão humana de domínio e integração nativa pendentes. Nenhuma execução do agente ou do classificador real realizada.
 
-Este contrato resolve a pendência de formato dos sinais na reconstrução do Guardião Gate. A política provisória MA-SIM-1.0 continua responsável pelas permissões; o JEV produz sinais auxiliares sobre uma ação concreta. As escolhas abaixo são propostas de desenho do experimento, não parâmetros jurídicos validados.
+Este contrato resolve a pendência de formato dos sinais na reconstrução do Guardião Gate. A política provisória MA-SIM-1.0 continua responsável pelas permissões; o JEV produz sinais auxiliares sobre uma ação concreta. As escolhas abaixo foram aceitas para o desenho offline, sem constituir parâmetros jurídicos validados.
 
 ## Identidade do contrato — esclarecimento confirmado
 
@@ -10,7 +10,7 @@ O pesquisador confirmou a manutenção do termo **contrato**. Ele designa a inte
 
 Os seis sinais são classificações propostas pelo projeto. Sua correspondência com perguntas configuráveis e respostas nativas da Typesafe ainda precisa ser verificada antes da integração real. O esquema local não comprova capacidades nativas do modelo. O futuro adaptador deverá compatibilizar a interface real, preservando o significado de cada campo e registrando eventuais mudanças de versão.
 
-No item 3, serão utilizadas respostas fixas que simulam essa interface. Essa etapa testa o fluxo do Guardião sem chamar o modelo, usar internet ou produzir efeitos reais; não treina, reconstrói ou mede o desempenho do JEV. O início do item 3 continua aguardando autorização explícita do pesquisador.
+No item 3, serão utilizadas respostas fixas que simulam essa interface. Essa etapa testa o fluxo do Guardião sem chamar o modelo, usar internet ou produzir efeitos reais; não treina, reconstrói ou mede o desempenho do JEV. O pesquisador autorizou o início do item 3 em 18/11/2026; veja o [núcleo offline](nucleo-offline.md).
 
 ## 1. Fontes e limites de uso
 
@@ -59,7 +59,7 @@ O adaptador da integração real deverá produzir exatamente esse formato e regi
 
 ## 4. Uso dos sinais no futuro controlador
 
-Ordem proposta:
+Ordem adotada para o núcleo offline:
 
 1. Falha de controle, entrada ou resposta inválida gera bloqueio técnico registrado. As regras determinísticas de proibição não podem ser superadas por escores ou aprovação simples.
 2. Aplicar a matriz MA-SIM-1.0 e preservar alçadas obrigatórias, mesmo com sinais favoráveis.
@@ -69,7 +69,7 @@ Ordem proposta:
 6. Natureza incompatível com a ação/cadastro exige revisão de uma ação até então admissível. Natureza decisória para aceite ou renúncia proibidos não converte BLOQUEAR em ESCALAR.
 7. Criticidade e confiança ficam nos registros, sem autorizar ou modificar a decisão nesta versão. Risco não mapeado segue a revisão prevista pela política.
 
-Os limiares 0,50 são escolhas sintéticas propostas para aprovação, sem calibração empírica. O artigo dá fundamento à supervisão e aos limites de delegação, não ao número. Essa camada de sinais não altera os oráculos dos 56 casos, que usam perfis favoráveis para isolar as regras determinísticas.
+Os limiares 0,50 são escolhas sintéticas aceitas para a construção offline, sem calibração empírica. O artigo dá fundamento à supervisão e aos limites de delegação, não ao número. Essa camada de sinais não altera os oráculos dos 56 casos, que usam perfis favoráveis para isolar as regras determinísticas.
 
 Resposta incompleta, categoria desconhecida, tipo incorreto, NaN, infinito, falha do serviço ou timeout não significam risco jurídico constatado. São falhas técnicas; devem produzir o status técnico correto e zero novas invocações de negócio. O timeout do classificador permanece 5 s de relógio virtual offline. Se uma ferramenta já iniciou, preservar a distinção entre invocação e efeito desconhecido; falha de sinal não desfaz efeito já ocorrido.
 
@@ -83,6 +83,6 @@ Verificações adicionais de contrato ficam separadas dos 56 casos do piloto: ca
 
 ## 6. Aprovação e próximo passo
 
-Este pacote permite revisar a definição antes de iniciar o núcleo offline. Para avançar ao item 3, o pesquisador deve aprovar o contrato e a preparação proposta. A configuração permanece com `approved_for_item_3=false` até esse aceite.
+O pesquisador autorizou o avanço ao item 3 em 18/11/2026. A configuração registra `approved_for_item_3=true` e o escopo limitado à construção offline. Os primeiros fluxos foram implementados e executados; a avaliação completa de aprovações e falhas será concluída no item 4.
 
 Amostragem com modelo, comparação com/sem controlador, repetições finais, rubrica de utilidade, provedor e orçamento permanecem decisões da coleta futura; não impedem construir o núcleo offline após aprovação, mas precisam estar congelados antes das rodadas correspondentes. A revisão de domínio permanece necessária para alegar validação humana da política.

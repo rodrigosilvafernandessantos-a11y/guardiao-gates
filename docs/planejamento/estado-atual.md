@@ -1,6 +1,6 @@
 # Estado atual e pendências
 
-Data: 17/11/2026. Este registro descreve a organização e a materialização dos dados de `guardiao-gate`, não uma execução de piloto.
+Data: 18/11/2026. Este registro inclui a materialização dos dados e a execução inicial do núcleo offline de `guardiao-gate`. Não houve execução com modelo nem avaliação completa do piloto.
 
 ## Decisões de organização
 
@@ -17,20 +17,20 @@ Data: 17/11/2026. Este registro descreve a organização e a materialização do
 | Problema | tarefa de revisão de pedidos no contexto de M&A | recorte acadêmico fundamentado documentalmente |
 | Evidências | entrevistas públicas e fontes complementares | não são entrevistas próprias |
 | Baseline | hipóteses, configuração e fórmulas B0 | sintética; geração ainda pendente |
-| Política | MA-SIM-1.0, papéis e quatro ferramentas previstas | exportação declarativa; controlador não implementado |
+| Política | MA-SIM-1.0, papéis e quatro ferramentas simuladas | controlador básico implementado; controles avançados serão completados no item 4 |
 | Estados | S01–S10 | materializados em JSON, incluindo estados excepcional e inválido |
 | Documentos | D01–D07 | corpos separados, D07 restrito, catálogo com hashes |
 | Ataques | dez pares normal/malicioso | vinte entradas materializadas e escopos separados |
-| Testes | 36 centrais + vinte pareados | 56 casos carregáveis, oráculos separados; experimento não executado |
+| Testes | 36 centrais + vinte pareados | três fluxos iniciais executados (T01/T07/T12); suíte completa ainda não executada |
 | Revisão | procedimento e formulário | avaliação humana qualificada pendente |
 
 ## Próxima etapa técnica
 
-O [roadmap do notebook](roadmap-notebook.md), elaborado em 17/11/2026, organiza as atividades abaixo em entregas e critérios de avanço. É um plano; a implementação e os resultados continuam pendentes.
+O [roadmap do notebook](roadmap-notebook.md), elaborado em 17/11/2026, organiza as atividades abaixo em entregas e critérios de avanço. O item 3 foi autorizado pelo pesquisador e implementado; seu escopo é o dos três fluxos iniciais, com resultados isolados por rodada.
 
-- Obter aprovação do [contrato candidato JEV-1.0](../especificacao/contrato-jev.md) e do avanço ao núcleo offline; concluir as decisões da coleta com modelo antes dessas rodadas.
+- Avançar ao item 4: completar controles e executar a suíte determinística de 56 casos, incluindo concorrência, histórico, mudanças e falhas. O contrato JEV-1.0 está aceito para uso offline.
 - Manter os dados materializados e seus oráculos separados; conferir hashes pelo [guia dos casos](../../data/cases/README.md).
-- Construir ferramentas simuladas instrumentadas e o controlador.
+- Preservar o [núcleo offline implementado](../especificacao/nucleo-offline.md) e suas evidências, ampliando os cenários de forma explícita.
 - Reconstruir o notebook após definir essa separação; nenhum notebook foi criado agora.
 - Executar os testes determinísticos e só depois avaliar o comportamento com modelo.
 - Gerar os dados de B0 e definir uma comparação de esforço com unidades e casos equivalentes.
@@ -39,7 +39,11 @@ O [roadmap do notebook](roadmap-notebook.md), elaborado em 17/11/2026, organiza 
 
 Os textos foram exportados sem respostas de referência no corpo, com pares B/M construídos deterministicamente. Estados, atores, regras, ações canônicas, aprovações e condições de falha foram convertidos em arquivos carregáveis. A configuração B0 foi exportada, mas suas amostras não foram geradas. Há um carregador e verificações de integridade, isolamento e fidelidade à fonte; essas verificações não são execuções dos 56 casos do experimento.
 
-O contrato candidato JEV-1.0 já define entrada, resposta e quatro perfis offline completos. Criticidade e confiança ficam apenas nos registros; os limiares de revisão são escolhas sintéticas identificadas. A configuração permanece sem aprovação para iniciar o item 3. A aprovação das perguntas do protocolo não resolve automaticamente as demais decisões metodológicas nem substitui revisão de domínio.
+O contrato JEV-1.0 define entrada, resposta e quatro perfis offline completos. Criticidade e confiança ficam apenas nos registros; os limiares de revisão são escolhas sintéticas identificadas. A configuração registra a autorização explícita do pesquisador em 18/11/2026 para iniciar o item 3, agora implementado. A aprovação das perguntas do protocolo não resolve automaticamente as demais decisões metodológicas nem substitui revisão de domínio.
+
+## Núcleo offline implementado
+
+O item 3 contém as quatro ferramentas, o fluxo permitir/escalar/bloquear, aprovação simulada específica, relógio virtual e exportação por rodada. T01 executou uma leitura, T07 bloqueou a solicitação de preço e T12 executou um envio simulado após aprovação, com zero chamadas antes dela. As 32 verificações automatizadas de dados, contrato e núcleo passaram. A avaliação completa permanece no item 4.
 
 ## Decisões humanas pendentes
 

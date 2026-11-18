@@ -1,7 +1,7 @@
 {
   "contract_version": "JEV-1.0",
-  "status": "candidato_aguardando_aprovacao_do_pesquisador",
-  "approved_for_item_3": false,
+  "status": "aprovado_para_nucleo_offline",
+  "approved_for_item_3": true,
   "human_domain_review": "pendente",
   "input_schema": "schemas/jev-entrada-1.0.schema.json",
   "response_schema": "schemas/jev-resposta-1.0.schema.json",
@@ -50,7 +50,7 @@
       "unexpected_personal_data": 0.5
     },
     "threshold_comparison": ">=",
-    "threshold_origin": "escolha sintética do pesquisador, proposta para aprovação; não derivada ou calibrada pelo artigo",
+    "threshold_origin": "escolha sintética aceita para construção offline; não derivada ou calibrada pelo artigo",
     "review_decision": "ESCALAR; zero execuções até revisão; aprovação simples não sana finalidade/acesso não autorizados",
     "personal_data_rule": "aplicar P14 aos dados inesperados; tratamento já autorizado não é automaticamente proibido por um escore",
     "tool_effect_authority": "cadastro confiável da ferramenta; escore baixo nunca transforma ação externa em interna",
@@ -173,6 +173,12 @@
     "native_api_compatibility_verified": false,
     "offline_mode": "respostas fixas que simulam a interface normalizada; sem chamar ou avaliar o modelo real",
     "fields_are_native_capabilities_confirmed": false,
-    "item_3_authorization": "aguardando resposta explícita à próxima pergunta de avanço"
+    "item_3_authorization": "aprovada explicitamente pelo pesquisador em 18/11/2026"
+  },
+  "approval_record": {
+    "date": "2026-11-18",
+    "actor": "pesquisador",
+    "instruction": "Vamos avançar para o item 3 - construir o núcleo offline",
+    "scope": "núcleo offline com ferramentas simuladas e sinais fixos; sem modelo, internet ou ações reais"
   }
 }

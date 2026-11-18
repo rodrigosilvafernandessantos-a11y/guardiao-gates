@@ -1,4 +1,4 @@
-"""Carregamento dos dados do piloto; controlador e agente ainda não implementados."""
+"""Dados e contratos do piloto; núcleo básico disponível em guardiao_gate.offline."""
 
 from .dados import PilotData
 

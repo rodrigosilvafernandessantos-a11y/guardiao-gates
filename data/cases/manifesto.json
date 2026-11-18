@@ -11,9 +11,8 @@
     "paired_cases": 20
   },
   "pending": [
-    "aprovação do contrato JEV-1.0 e do avanço ao item 3",
     "definições da coleta futura com modelo",
-    "controlador e executor de testes",
+    "conclusão dos controles avançados e da suíte completa no item 4",
     "revisão humana de domínio"
   ],
   "sources": [
@@ -31,7 +30,7 @@
     },
     {
       "path": "docs/especificacao/aprovacoes-e-falhas.md",
-      "sha256": "ef5bfa4de17ebf63b903461ee2c350fe039555374fbb349aad60d24b4187a27a"
+      "sha256": "85195f68f9398a6f7cd0ef4b3895e6f6472685578f3ae64defcba8b74996bbf3"
     },
     {
       "path": "docs/avaliacao/casos-e-resultados-esperados.md",
@@ -47,7 +46,7 @@
     },
     {
       "path": "config/jev-1.0.json",
-      "sha256": "4996c381832a43dff3ceb40d9aaffab82c59f29d55e3173ca4628a32b4cf8e8e"
+      "sha256": "0475691be60723323aaf329d348e71c5c43d4db0050470c9684ebe3293eac9af"
     },
     {
       "path": "schemas/jev-entrada-1.0.schema.json",
@@ -59,13 +58,13 @@
     },
     {
       "path": "docs/especificacao/contrato-jev.md",
-      "sha256": "73f17d0730001c1ff5b1f5533b52aedfb98ec4a0c8f923011053bf26ec3e5745"
+      "sha256": "6db56d44b2ba2beefbd706dfea62ec919d382d693197e10b2a647aa62e5115c5"
     }
   ],
   "artifacts": [
     {
       "path": "config/jev-1.0.json",
-      "sha256": "4996c381832a43dff3ceb40d9aaffab82c59f29d55e3173ca4628a32b4cf8e8e"
+      "sha256": "0475691be60723323aaf329d348e71c5c43d4db0050470c9684ebe3293eac9af"
     },
     {
       "path": "data/cases/acoes-canonicas.json",
@@ -113,7 +112,7 @@
     },
     {
       "path": "data/cases/sinais-offline.json",
-      "sha256": "6cad3e85333ee0ca138d93481b6a021dd14734f41b8f76935dd6c2b41e83460c"
+      "sha256": "eeb7dafd75bbd51ac4cc3d54114229798924d2e32bf570ca3f99c779951b9e76"
     },
     {
       "path": "data/fixtures/documentos/D01.txt",

@@ -23,7 +23,8 @@ Este é o índice vigente. Os documentos em `historico/` preservam versões ante
 - [Estado da operação simulada](especificacao/estado-da-operacao.md).
 - [Documentos sintéticos D01–D07](especificacao/documentos-do-piloto.md).
 - [Aprovações específicas e falhas](especificacao/aprovacoes-e-falhas.md).
-- [Contrato candidato JEV-1.0](especificacao/contrato-jev.md).
+- [Contrato JEV-1.0 — uso offline autorizado](especificacao/contrato-jev.md).
+- [Núcleo offline: execução e limites](especificacao/nucleo-offline.md).
 
 ## Avaliação
 

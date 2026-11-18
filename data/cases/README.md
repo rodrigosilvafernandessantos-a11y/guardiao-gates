@@ -1,6 +1,6 @@
 # Casos e configurações do piloto
 
-Materialização versão 1.0 da especificação MA-SIM-1.0: **36 casos centrais + vinte casos pareados = 56 casos**, com estados S01–S10, oito papéis e 14 regras. Os arquivos são carregáveis; o controlador e o executor do experimento ainda não foram implementados.
+Materialização versão 1.0 da especificação MA-SIM-1.0: **36 casos centrais + vinte casos pareados = 56 casos**, com estados S01–S10, oito papéis e 14 regras. Os arquivos são carregáveis. O [núcleo offline básico](../../docs/especificacao/nucleo-offline.md) e seu executor já implementam T01/T07/T12; a suíte completa será concluída no item 4.
 
 ## Separação de acesso
 
@@ -98,6 +98,6 @@ A exportação é determinística e substitui os artefatos gerados. Antes de alt
 
 ## Pendências preservadas
 
-O contrato candidato [JEV-1.0](../../docs/especificacao/contrato-jev.md) define esquemas de entrada/resposta e perfis completos. `executable=true` significa que os perfis são materializados e validáveis; `approved_for_item_3=false` registra que o início da próxima etapa aguarda o pesquisador. A configuração canônica está em `config/jev-1.0.json`; o gerador e o carregador verificam sua consistência. As decisões da coleta futura e a revisão humana de domínio continuam pendentes. Nenhum ator fictício ou conferência de arquivos constitui validação jurídica ou resultado experimental.
+O contrato [JEV-1.0](../../docs/especificacao/contrato-jev.md) define esquemas de entrada/resposta e perfis completos. `executable=true` significa que os perfis são materializados e validáveis; `approved_for_item_3=true` registra a autorização do pesquisador em 18/11/2026 para construir o núcleo offline. A configuração canônica está em `config/jev-1.0.json`; o gerador e o carregador verificam sua consistência. As decisões da coleta futura e a revisão humana de domínio continuam pendentes. Nenhum ator fictício ou conferência de arquivos constitui validação jurídica ou resultado experimental.
 
 Fontes: [permissões](../../docs/especificacao/permissoes-e-responsaveis.md), [estados](../../docs/especificacao/estado-da-operacao.md), [aprovações](../../docs/especificacao/aprovacoes-e-falhas.md), [casos](../../docs/avaliacao/casos-e-resultados-esperados.md) e [ataques](../../docs/avaliacao/ataques-adaptados.md).

@@ -2,9 +2,9 @@
   "schema_version": "1.1",
   "source": "config/jev-1.0.json",
   "contract_version": "JEV-1.0",
-  "contract_status": "candidato_aguardando_aprovacao_do_pesquisador",
+  "contract_status": "aprovado_para_nucleo_offline",
   "executable": true,
-  "approved_for_item_3": false,
+  "approved_for_item_3": true,
   "response_schema": "schemas/jev-resposta-1.0.schema.json",
   "profiles": {
     "leitura": {

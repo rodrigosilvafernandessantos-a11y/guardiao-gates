@@ -316,7 +316,7 @@ def main():
         'schema_version': '1.0', 'policy_version': POLICY, 'status': 'materializado_nao_executado',
         'human_domain_review': 'pendente',
         'counts': {'base_documents': 7, 'paired_documents': 20, 'states': 10, 'central_cases': 36, 'paired_cases': 20},
-        'pending': ['aprovação do contrato JEV-1.0 e do avanço ao item 3', 'definições da coleta futura com modelo', 'controlador e executor de testes', 'revisão humana de domínio'],
+        'pending': ([] if jev['approved_for_item_3'] else ['aprovação do contrato JEV-1.0 e do avanço ao item 3']) + ['definições da coleta futura com modelo', 'conclusão dos controles avançados e da suíte completa no item 4', 'revisão humana de domínio'],
         'sources': [{'path': path, 'sha256': digest((ROOT / path).read_bytes())} for path in SOURCE.values()],
         'artifacts': [{'path': path, 'sha256': digest((ROOT / path).read_bytes())} for path in sorted(set(generated))],
     })

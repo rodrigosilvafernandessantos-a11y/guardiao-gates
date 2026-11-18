@@ -6,4 +6,4 @@ A reconstrução deve partir da [especificação](../docs/README.md), com entrad
 
 O [roadmap do notebook](../docs/planejamento/roadmap-notebook.md) define a sequência proposta de preparação, implementação, avaliação e exportação de evidências, com critérios de conclusão por etapa.
 
-Os documentos, estados e 56 casos já estão materializados. O [guia dos casos](../data/cases/README.md) fornece exemplo de carregamento para o futuro notebook, com entradas e referências separadas. O contrato candidato JEV-1.0 está definido e aguarda aprovação para iniciar o núcleo offline; o controlador ainda não foi construído.
+Os documentos, estados e 56 casos já estão materializados. O [guia dos casos](../data/cases/README.md) fornece exemplo de carregamento para o futuro notebook, com entradas e referências separadas. O contrato JEV-1.0 foi aceito para uso offline. O [núcleo básico já pode ser executado](../docs/especificacao/nucleo-offline.md) para T01/T07/T12; sua integração ao notebook principal ocorrerá após completar os controles do item 4.

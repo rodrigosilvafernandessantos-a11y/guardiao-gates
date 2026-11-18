@@ -2,7 +2,7 @@
 
 Data: 17/11/2026. Versão: 1.0. Situação: planejamento da reconstrução; nenhuma implementação ou execução nova é apresentada neste documento.
 
-Atualização de acompanhamento: a etapa 2 teve seus dados materializados; consulte o [estado atual](estado-atual.md) e o [guia de carregamento](../../data/cases/README.md). As descrições de ponto de partida abaixo preservam o contexto de elaboração do plano. Nenhuma rodada do agente foi executada. O contrato candidato [JEV-1.0](../especificacao/contrato-jev.md) foi preparado para revisão; o início do item 3 aguarda aprovação do pesquisador.
+Atualização de acompanhamento: a etapa 2 teve seus dados materializados; consulte o [estado atual](estado-atual.md) e o [guia de carregamento](../../data/cases/README.md). As descrições de ponto de partida abaixo preservam o contexto de elaboração do plano. Nenhuma rodada com modelo foi executada. Em 18/11/2026, o pesquisador autorizou o item 3, e o [núcleo offline](../especificacao/nucleo-offline.md) foi implementado, com T01/T07/T12 executados. O contrato [JEV-1.0](../especificacao/contrato-jev.md) está aceito para essa construção; os 56 casos completos permanecem no item 4.
 
 ## 1. Pedido estruturado aplicado
 
