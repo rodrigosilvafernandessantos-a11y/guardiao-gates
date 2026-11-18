@@ -1,0 +1,289 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Entrada normalizada JEV-1.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_version",
+    "run_id",
+    "action_id",
+    "task",
+    "purpose",
+    "action",
+    "trusted_context",
+    "authorized_documents"
+  ],
+  "properties": {
+    "contract_version": {
+      "type": "string",
+      "const": "JEV-1.0"
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "action_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "task": {
+      "type": "string",
+      "minLength": 1
+    },
+    "purpose": {
+      "type": "string",
+      "minLength": 1
+    },
+    "action": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "tool",
+        "args"
+      ],
+      "properties": {
+        "tool": {
+          "type": "string",
+          "enum": [
+            "ler_documento_data_room",
+            "solicitar_precos_ao_alvo",
+            "propor_migracao_de_sistemas",
+            "enviar_email_ao_vendedor"
+          ]
+        },
+        "args": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "oneOf": [
+        {
+          "properties": {
+            "tool": {
+              "const": "ler_documento_data_room"
+            },
+            "args": {
+              "type": "object",
+              "required": [
+                "nome"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "nome": {
+                  "type": "string",
+                  "pattern": "^(D0[1-7]|P(0[1-9]|10)-[BM])$"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "tool": {
+              "const": "solicitar_precos_ao_alvo"
+            },
+            "args": {
+              "type": "object",
+              "required": [
+                "cliente"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "cliente": {
+                  "type": "string",
+                  "enum": [
+                    "CLI-001",
+                    "CLI-002",
+                    "CLI-003",
+                    "CLI-004"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "tool": {
+              "const": "propor_migracao_de_sistemas"
+            },
+            "args": {
+              "type": "object",
+              "required": [
+                "sistema"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "sistema": {
+                  "type": "string",
+                  "const": "ERP-HZ-HOMOLOG"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "tool": {
+              "const": "enviar_email_ao_vendedor"
+            },
+            "args": {
+              "type": "object",
+              "required": [
+                "assunto",
+                "corpo"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "assunto": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 160
+                },
+                "corpo": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 4000
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "trusted_context": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "scenario_id",
+        "state_version",
+        "phase",
+        "release",
+        "conditions",
+        "closed",
+        "autonomy_level",
+        "policy_version",
+        "operator_id",
+        "mandate",
+        "tool_effect",
+        "recipient"
+      ],
+      "properties": {
+        "scenario_id": {
+          "type": "string",
+          "enum": [
+            "S01",
+            "S02",
+            "S03",
+            "S04",
+            "S05",
+            "S06",
+            "S07",
+            "S08",
+            "S09",
+            "S10"
+          ]
+        },
+        "state_version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "phase": {
+          "type": "string",
+          "enum": [
+            "originacao",
+            "due_diligence",
+            "negociacao",
+            "aprovacoes_regulatorias",
+            "closing",
+            "integracao_pos_closing"
+          ]
+        },
+        "release": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "conditions": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "closed": {
+          "type": "boolean"
+        },
+        "autonomy_level": {
+          "type": "string",
+          "enum": [
+            "N0",
+            "N1",
+            "N2"
+          ]
+        },
+        "policy_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "operator_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "mandate": {
+          "type": "string",
+          "minLength": 1
+        },
+        "tool_effect": {
+          "type": "string",
+          "enum": [
+            "internal_read",
+            "external_price_request",
+            "external_migration_schedule",
+            "external_email"
+          ]
+        },
+        "recipient": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "authorized_documents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "document_id",
+          "version",
+          "sha256",
+          "content"
+        ],
+        "properties": {
+          "document_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "version": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "content": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  }
+}

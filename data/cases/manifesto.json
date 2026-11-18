@@ -1,0 +1,239 @@
+{
+  "schema_version": "1.0",
+  "policy_version": "MA-SIM-1.0",
+  "status": "materializado_nao_executado",
+  "human_domain_review": "pendente",
+  "counts": {
+    "base_documents": 7,
+    "paired_documents": 20,
+    "states": 10,
+    "central_cases": 36,
+    "paired_cases": 20
+  },
+  "pending": [
+    "aprovação do contrato JEV-1.0 e do avanço ao item 3",
+    "definições da coleta futura com modelo",
+    "controlador e executor de testes",
+    "revisão humana de domínio"
+  ],
+  "sources": [
+    {
+      "path": "docs/especificacao/documentos-do-piloto.md",
+      "sha256": "8654f361da102f888ef8871739d2a7c8d5c21461216edf0657fbbf9a02fca31f"
+    },
+    {
+      "path": "docs/especificacao/estado-da-operacao.md",
+      "sha256": "9ade8132f09797a9cbecd7c331dc0edb527dfee4c756d264dfdeae324698e714"
+    },
+    {
+      "path": "docs/especificacao/permissoes-e-responsaveis.md",
+      "sha256": "789bd754d629d427314b07dbecdf38d7c442f8cb575afac2f249398175972710"
+    },
+    {
+      "path": "docs/especificacao/aprovacoes-e-falhas.md",
+      "sha256": "ef5bfa4de17ebf63b903461ee2c350fe039555374fbb349aad60d24b4187a27a"
+    },
+    {
+      "path": "docs/avaliacao/casos-e-resultados-esperados.md",
+      "sha256": "a8e96ee864426e3342bd5e22fa127f85e5508de35505bb22f7cb496881215076"
+    },
+    {
+      "path": "docs/avaliacao/ataques-adaptados.md",
+      "sha256": "4f4934dbef945ddcc85cfbccd6b51b8b1d8986fc3d5b4d07bebe673b53d5f422"
+    },
+    {
+      "path": "docs/avaliacao/baseline-sintetica.md",
+      "sha256": "9ae3ad16a6d34ec574333f4d10fd2baec967dc1a30cfa5bf12686b264cf651bf"
+    },
+    {
+      "path": "config/jev-1.0.json",
+      "sha256": "4996c381832a43dff3ceb40d9aaffab82c59f29d55e3173ca4628a32b4cf8e8e"
+    },
+    {
+      "path": "schemas/jev-entrada-1.0.schema.json",
+      "sha256": "da8bfc7a9d127b4332dc5c0dee866fcc458719d44681326a381c0fbeadd82b8f"
+    },
+    {
+      "path": "schemas/jev-resposta-1.0.schema.json",
+      "sha256": "de71fe1909eb7b0c7de60bde9c36e45a8257b206a0ee3c678712e0a25fcecd0c"
+    },
+    {
+      "path": "docs/especificacao/contrato-jev.md",
+      "sha256": "73f17d0730001c1ff5b1f5533b52aedfb98ec4a0c8f923011053bf26ec3e5745"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "config/jev-1.0.json",
+      "sha256": "4996c381832a43dff3ceb40d9aaffab82c59f29d55e3173ca4628a32b4cf8e8e"
+    },
+    {
+      "path": "data/cases/acoes-canonicas.json",
+      "sha256": "8b693978fc51b448c9970b39cb359866e7002f22dc89d2a9f0ba86774d94f9a6"
+    },
+    {
+      "path": "data/cases/aprovacoes.json",
+      "sha256": "91248595060fecadbbbc2f584648207856279efcc50b4c90851ed23798b06d56"
+    },
+    {
+      "path": "data/cases/atores.json",
+      "sha256": "b2ed8afcca13666f343a0c7ae9a1023e012b14e75a633cb24891e74401be016d"
+    },
+    {
+      "path": "data/cases/baseline-b0.json",
+      "sha256": "18c481c1402870aea102f5c7c0ab22a26aaa85f4bf59a24b8bb50a780ac74be7"
+    },
+    {
+      "path": "data/cases/casos-centrais.jsonl",
+      "sha256": "b4426afba5701e7cf829826a38b1d3494f3078695605af3ccec46a1b41437bf3"
+    },
+    {
+      "path": "data/cases/casos-pareados.jsonl",
+      "sha256": "660502f8f0650b0b2fac1d44ef13ba596a53cf386cedb3f077198cec652d88d1"
+    },
+    {
+      "path": "data/cases/estados.json",
+      "sha256": "5486ec3729ba817c3daea2f478ed421526c38bbaa689dd917d45fb8e04b92fa6"
+    },
+    {
+      "path": "data/cases/oraculos/centrais.jsonl",
+      "sha256": "3e4adc68ffa0ce8a4fa5297805787756de77dfd0afcb8cc929213e8bf27f04b8"
+    },
+    {
+      "path": "data/cases/oraculos/documentos.json",
+      "sha256": "dd78e7c397c828d5061f353547e337a9c9e6294945035f34aacd6c3431d1db01"
+    },
+    {
+      "path": "data/cases/oraculos/pareados.jsonl",
+      "sha256": "5b944ba4cf5478bfddbc1627274957ec1d28f32551a91c41496e73f59d44295a"
+    },
+    {
+      "path": "data/cases/politica.json",
+      "sha256": "b072eec37c70200aa570af318697f07c20cb465708a76e62ddd510cabd7b072e"
+    },
+    {
+      "path": "data/cases/sinais-offline.json",
+      "sha256": "6cad3e85333ee0ca138d93481b6a021dd14734f41b8f76935dd6c2b41e83460c"
+    },
+    {
+      "path": "data/fixtures/documentos/D01.txt",
+      "sha256": "4177a0a2847d04f53b8781402906213e339cc4e2e492b084246886c6af8ffec1"
+    },
+    {
+      "path": "data/fixtures/documentos/D02.txt",
+      "sha256": "b1ac54d632c73da0ea034d8b317ecefa74073af02fdaffa1bddfbef4bb8f6a56"
+    },
+    {
+      "path": "data/fixtures/documentos/D03.txt",
+      "sha256": "de5264e4cb67d08e5c5fc320620dd432c9f4881404072fbbd49025132942bbeb"
+    },
+    {
+      "path": "data/fixtures/documentos/D04.txt",
+      "sha256": "640c1ca674e99bd0678fa4e66589722389eb6483dddeadec2c97dc76aaaa5cbf"
+    },
+    {
+      "path": "data/fixtures/documentos/D05.txt",
+      "sha256": "b11d160c4c70c4323e015e737d404b56ca05b2de1a3b94d02cc00ccc6527af3a"
+    },
+    {
+      "path": "data/fixtures/documentos/D06.txt",
+      "sha256": "dc581af3ffaaf483aba10672140e596c64ecba95ed289835e748b0c4e0473535"
+    },
+    {
+      "path": "data/fixtures/manifesto.json",
+      "sha256": "6dd7ebe8f9060f1af8d790998517afaa6ee3aceb686e6e6732308363f37c63dc"
+    },
+    {
+      "path": "data/fixtures/pares/P01-B.txt",
+      "sha256": "b1ac54d632c73da0ea034d8b317ecefa74073af02fdaffa1bddfbef4bb8f6a56"
+    },
+    {
+      "path": "data/fixtures/pares/P01-M.txt",
+      "sha256": "eff3003745482b17aca5b31eb92ea87fbfd3cfaac0bd53edc4ae6b16370b707f"
+    },
+    {
+      "path": "data/fixtures/pares/P02-B.txt",
+      "sha256": "640c1ca674e99bd0678fa4e66589722389eb6483dddeadec2c97dc76aaaa5cbf"
+    },
+    {
+      "path": "data/fixtures/pares/P02-M.txt",
+      "sha256": "42a16e30715556e02bde512410eb2cd82c2a63844a6628273fdfc3c525c30b35"
+    },
+    {
+      "path": "data/fixtures/pares/P03-B.txt",
+      "sha256": "4177a0a2847d04f53b8781402906213e339cc4e2e492b084246886c6af8ffec1"
+    },
+    {
+      "path": "data/fixtures/pares/P03-M.txt",
+      "sha256": "cb76a2c3b87eba155e5ba4df27aca47ba0f16918843f3e41e6113c7edc815992"
+    },
+    {
+      "path": "data/fixtures/pares/P04-B.txt",
+      "sha256": "de5264e4cb67d08e5c5fc320620dd432c9f4881404072fbbd49025132942bbeb"
+    },
+    {
+      "path": "data/fixtures/pares/P04-M.txt",
+      "sha256": "4d7b4abb61cb495a20bf9c103aea48a565cb7bc0761a36b221403852f9b79c0b"
+    },
+    {
+      "path": "data/fixtures/pares/P05-B.txt",
+      "sha256": "640c1ca674e99bd0678fa4e66589722389eb6483dddeadec2c97dc76aaaa5cbf"
+    },
+    {
+      "path": "data/fixtures/pares/P05-M.txt",
+      "sha256": "3084a14a18e8948a822980db90cfee3bf8c00e689b6df5330dfc2c14d5bd8c31"
+    },
+    {
+      "path": "data/fixtures/pares/P06-B.txt",
+      "sha256": "b11d160c4c70c4323e015e737d404b56ca05b2de1a3b94d02cc00ccc6527af3a"
+    },
+    {
+      "path": "data/fixtures/pares/P06-M.txt",
+      "sha256": "71180fd8e9afff02439fc74faede0f830d5ff9b0f948ec74d976c7a3380ace7c"
+    },
+    {
+      "path": "data/fixtures/pares/P07-B.txt",
+      "sha256": "b11d160c4c70c4323e015e737d404b56ca05b2de1a3b94d02cc00ccc6527af3a"
+    },
+    {
+      "path": "data/fixtures/pares/P07-M.txt",
+      "sha256": "093546e6cd93ee19cefd1356bc751056b821928723142da0b3d8170c086818e7"
+    },
+    {
+      "path": "data/fixtures/pares/P08-B.txt",
+      "sha256": "de5264e4cb67d08e5c5fc320620dd432c9f4881404072fbbd49025132942bbeb"
+    },
+    {
+      "path": "data/fixtures/pares/P08-M.txt",
+      "sha256": "7b99ad3f1e03e031257ee9b6c8dc9dadf9cbf10bdddee6f1d0c676f3df74f7f0"
+    },
+    {
+      "path": "data/fixtures/pares/P09-B.txt",
+      "sha256": "b11d160c4c70c4323e015e737d404b56ca05b2de1a3b94d02cc00ccc6527af3a"
+    },
+    {
+      "path": "data/fixtures/pares/P09-M.txt",
+      "sha256": "c7ef99a02c21025beaf6119c1366baa53572e67128f0dda639d97521822a4f3e"
+    },
+    {
+      "path": "data/fixtures/pares/P10-B.txt",
+      "sha256": "640c1ca674e99bd0678fa4e66589722389eb6483dddeadec2c97dc76aaaa5cbf"
+    },
+    {
+      "path": "data/fixtures/pares/P10-M.txt",
+      "sha256": "6c5d912c7f9f5b451891160d36dc36dd1458fea7939aa07249ab33bd46e98f4e"
+    },
+    {
+      "path": "data/fixtures/restritos/D07.txt",
+      "sha256": "bfaae1278c2e697a85758f844518b8e4ee38a0c5708a3e700b970a97dcd5105c"
+    },
+    {
+      "path": "schemas/jev-entrada-1.0.schema.json",
+      "sha256": "da8bfc7a9d127b4332dc5c0dee866fcc458719d44681326a381c0fbeadd82b8f"
+    },
+    {
+      "path": "schemas/jev-resposta-1.0.schema.json",
+      "sha256": "de71fe1909eb7b0c7de60bde9c36e45a8257b206a0ee3c678712e0a25fcecd0c"
+    }
+  ]
+}

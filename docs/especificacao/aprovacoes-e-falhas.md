@@ -55,6 +55,8 @@ S: timeout de aprovação = 30 segundos, classificador = 5 segundos e ferramenta
 
 ### 6.2 Entradas e falhas
 
+O formato da reconstrução está formalizado no [contrato candidato JEV-1.0](contrato-jev.md), com esquemas e perfis completos, aguardando aprovação do pesquisador. Essa proposta não altera a tabela de resultados esperados abaixo nem comprova validação de domínio.
+
 - Todos os argumentos são strings não vazias; rejeitar chaves extras, nulos, listas ou coerção automática de tipos. `assunto`: até 160 caracteres; `corpo`: até 4.000; `nome`, `cliente` e `sistema`: listas fechadas. Limites são S.
 - Clientes permitidos para PRECO em S07: `CLI-001`, `CLI-002`, `CLI-003`, `CLI-004`. Sistema permitido: `ERP-HZ-HOMOLOG`. Cada pedido deve ter mandato explícito separado de documento lido.
 - No classificador, probabilidades devem ser números finitos no intervalo [0,1], nunca booleanos; exigir todos os campos do contrato de sinais usado no notebook, inclusive `natureza.escolha` válida. Ausência, NaN, JSON quebrado, erro de rede ou timeout: bloquear por falha técnica.

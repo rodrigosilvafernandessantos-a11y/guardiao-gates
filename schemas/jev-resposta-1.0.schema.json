@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Resposta normalizada JEV-1.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_version",
+    "gun_jumping",
+    "informacao_restrita",
+    "dados_pessoais",
+    "efeito_externo",
+    "natureza",
+    "criticidade"
+  ],
+  "properties": {
+    "contract_version": {
+      "type": "string",
+      "const": "JEV-1.0"
+    },
+    "gun_jumping": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "informacao_restrita": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "dados_pessoais": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "efeito_externo": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "natureza": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "escolha",
+        "confianca"
+      ],
+      "properties": {
+        "escolha": {
+          "type": "string",
+          "enum": [
+            "analitica",
+            "comunicacao",
+            "decisoria",
+            "integracao"
+          ]
+        },
+        "confianca": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    },
+    "criticidade": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "score",
+        "confianca"
+      ],
+      "properties": {
+        "score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 4
+        },
+        "confianca": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    }
+  }
+}

@@ -6,6 +6,9 @@ Este é o índice vigente. Os documentos em `historico/` preservam versões ante
 
 - [Visão geral do projeto (Word)](visao-geral/visao-geral-do-projeto.docx).
 - [Estado atual e pendências](planejamento/estado-atual.md).
+- [Roadmap do notebook](planejamento/roadmap-notebook.md).
+- [Protocolo experimental em definição](planejamento/protocolo-experimental.md).
+- [Dados materializados: formatos, carregamento e validação](../data/cases/README.md).
 - [Roadmap anterior à reconstrução (Word)](planejamento/roadmap.docx).
 - [Kickoff do TCC (PowerPoint)](tcc/kickoff-tcc.pptx).
 
@@ -20,6 +23,7 @@ Este é o índice vigente. Os documentos em `historico/` preservam versões ante
 - [Estado da operação simulada](especificacao/estado-da-operacao.md).
 - [Documentos sintéticos D01–D07](especificacao/documentos-do-piloto.md).
 - [Aprovações específicas e falhas](especificacao/aprovacoes-e-falhas.md).
+- [Contrato candidato JEV-1.0](especificacao/contrato-jev.md).
 
 ## Avaliação
 

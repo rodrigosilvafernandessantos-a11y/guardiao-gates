@@ -1,0 +1,121 @@
+{
+  "baseline_id": "B0_MA_SINTETICA_v1",
+  "origem_dado": "sintetico_informado_por_literatura",
+  "data_pesquisa": "2026-11-17",
+  "unidade": "solicitacao",
+  "unidade_tempo": "minuto_pessoa",
+  "seed_sugerida": 20261117,
+  "n_solicitacoes_sugerido": 1000,
+  "repeticoes_sugeridas": 1000,
+  "triangular_T1_T6_multiplicadores": [
+    0.5,
+    1.0,
+    1.5
+  ],
+  "eventos_humanos_iniciais": 3,
+  "revisoes_iniciais": 1,
+  "eventos_por_especialista": 1,
+  "revisoes_por_especialista": 1,
+  "eventos_por_rodada": 2,
+  "revisoes_por_rodada": 1,
+  "max_rodadas": 2,
+  "fracao_tempo_rodada_ajuste": 0.5,
+  "introduz_novos_erros": false,
+  "injeta_falhas_tecnicas": false,
+  "espera_opcional": true,
+  "classes": {
+    "simples": {
+      "peso": 0.6,
+      "T1_T6_centrais": [
+        3,
+        2,
+        18,
+        8,
+        5,
+        4
+      ],
+      "p_especialista": 0.05,
+      "tri_especialista": [
+        5,
+        15,
+        25
+      ],
+      "p_retrabalho": 0.1,
+      "p_segunda_rodada_dado_retrabalho": 0.1,
+      "tri_rodada": [
+        6,
+        12,
+        24
+      ],
+      "p_erro_inicial": 0.08,
+      "p_deteccao_dado_erro": 0.75,
+      "tri_espera_util": [
+        0,
+        30,
+        120
+      ]
+    },
+    "moderada": {
+      "peso": 0.3,
+      "T1_T6_centrais": [
+        5,
+        4,
+        35,
+        15,
+        8,
+        6
+      ],
+      "p_especialista": 0.6,
+      "tri_especialista": [
+        10,
+        30,
+        50
+      ],
+      "p_retrabalho": 0.25,
+      "p_segunda_rodada_dado_retrabalho": 0.25,
+      "tri_rodada": [
+        12,
+        24,
+        42
+      ],
+      "p_erro_inicial": 0.15,
+      "p_deteccao_dado_erro": 0.7,
+      "tri_espera_util": [
+        30,
+        120,
+        480
+      ]
+    },
+    "complexa": {
+      "peso": 0.1,
+      "T1_T6_centrais": [
+        8,
+        6,
+        60,
+        25,
+        12,
+        9
+      ],
+      "p_especialista": 1.0,
+      "tri_especialista": [
+        20,
+        60,
+        100
+      ],
+      "p_retrabalho": 0.4,
+      "p_segunda_rodada_dado_retrabalho": 0.5,
+      "tri_rodada": [
+        20,
+        40,
+        75
+      ],
+      "p_erro_inicial": 0.25,
+      "p_deteccao_dado_erro": 0.6,
+      "tri_espera_util": [
+        120,
+        480,
+        1440
+      ]
+    }
+  }
+}

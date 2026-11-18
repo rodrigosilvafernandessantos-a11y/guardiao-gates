@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0",
+  "source": "docs/especificacao/aprovacoes-e-falhas.md",
+  "trusted_test_harness_only": true,
+  "example_not_an_authorization": {
+    "approval_id": "APR-001",
+    "run_id": "RUN-001",
+    "action_id": "ACT-001",
+    "operation_id": "OP-MA-001",
+    "scenario_id": "S03",
+    "state_version": 1,
+    "policy_version": "MA-SIM-1.0",
+    "tool": "enviar_email_ao_vendedor",
+    "args": {
+      "assunto": "Diligência — consentimento do credor",
+      "corpo": "Prezados, solicitamos disponibilizar na sala de dados o consentimento escrito do Banco Prisma previsto na cláusula 3 do D02. Não solicitamos integração operacional. Atenciosamente, equipe de diligência."
+    },
+    "recipient": "juridico.vendedor@horizonte.example",
+    "purpose": "obter documento faltante",
+    "approver_id": "JUR-01",
+    "decision": "aprovar",
+    "issued_at": "2026-11-17T13:00:00Z",
+    "expires_at": "2026-11-17T13:10:00Z",
+    "max_invocations": 1,
+    "used": false
+  },
+  "ttl_seconds": 600,
+  "valid_interval": "issued_at <= now < expires_at",
+  "max_invocations": 1,
+  "decision_enum": [
+    "aprovar",
+    "negar"
+  ],
+  "timeouts_seconds": {
+    "approval": 30,
+    "classifier": 5,
+    "tool": 5
+  },
+  "clock": "virtual",
+  "hash_provided_by": "controller",
+  "hash_bound_fields": [
+    "run_id",
+    "action_id",
+    "operation_id",
+    "scenario_id",
+    "state_version",
+    "policy_version",
+    "tool",
+    "args",
+    "recipient",
+    "purpose",
+    "document_ids_versions_hashes"
+  ],
+  "reserve_and_consume_atomically": true,
+  "per_case_events": "casos-centrais.jsonl: setup.approval_events"
+}

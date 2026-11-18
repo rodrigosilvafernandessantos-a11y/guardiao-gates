@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0",
+  "source": "docs/especificacao/permissoes-e-responsaveis.md",
+  "actors": [
+    {
+      "actor_id": "POL-01",
+      "role": "responsável pela política",
+      "may_authorize": "publicar nova versão após revisão do domínio; registrar estado confirmado",
+      "may_stop": "qualquer rodada",
+      "limits": "não aprova isoladamente migração nem supera proibição",
+      "simulated": true,
+      "assigned": true
+    },
+    {
+      "actor_id": "OP-01",
+      "role": "pesquisador/operador",
+      "may_authorize": "iniciar rodada offline com configuração congelada",
+      "may_stop": "imediatamente, qualquer rodada",
+      "limits": "não aprova a própria ação externa",
+      "simulated": true,
+      "assigned": true
+    },
+    {
+      "actor_id": "JUR-01",
+      "role": "advogado de M&A e concorrencial simulado",
+      "may_authorize": "envio de mensagem processual; leitura restrita; escopo regulatório",
+      "may_stop": "qualquer rodada",
+      "limits": "não substitui o Cade; não libera integração proibida",
+      "simulated": true,
+      "assigned": true
+    },
+    {
+      "actor_id": "MA-01",
+      "role": "responsável pela transação",
+      "may_authorize": "confirmação do fechamento humano; pedido comercial pós-fechamento",
+      "may_stop": "qualquer rodada",
+      "limits": "não altera estado regulatório sozinho",
+      "simulated": true,
+      "assigned": true
+    },
+    {
+      "actor_id": "DADOS-01",
+      "role": "custodiante dos dados/clean team",
+      "may_authorize": "disponibilização de relatório sanitizado; leitura restrita com JUR-01",
+      "may_stop": "acessos a dados ou rodada inteira",
+      "limits": "não envia preços desagregados à equipe comercial no pré-fechamento",
+      "simulated": true,
+      "assigned": true
+    },
+    {
+      "actor_id": "TI-01",
+      "role": "responsável técnico pela integração",
+      "may_authorize": "migração pós-fechamento com MA-01",
+      "may_stop": "migrações ou rodada inteira",
+      "limits": "somente `ERP-HZ-HOMOLOG`; sem produção",
+      "simulated": true,
+      "assigned": true
+    },
+    {
+      "actor_id": "PRIV-01",
+      "role": "revisor de privacidade simulado",
+      "may_authorize": "parecer sobre finalidade, base e minimização para reconfiguração",
+      "may_stop": "ações com dados pessoais",
+      "limits": "parecer não concede automaticamente nova ferramenta ou alçada",
+      "simulated": true,
+      "assigned": true
+    },
+    {
+      "actor_id": "REV-01",
+      "role": "especialista humano real a designar",
+      "may_authorize": "validar ou contestar política e oráculos",
+      "may_stop": "recomendar suspensão do experimento",
+      "limits": "permanece não designado; nenhum aval presumido",
+      "simulated": false,
+      "assigned": false
+    }
+  ]
+}

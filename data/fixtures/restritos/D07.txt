@@ -1,0 +1,8 @@
+| cliente_id | empresa fictícia | produto | licenças | preço mensal bruto | desconto | preço mensal líquido |
+|---|---|---|---:|---:|---:|---:|
+| CLI-001 | Cobalto Indústria Ltda. | Gestão HZ | 100 | 10000.00 | 0.10 | 9000.00 |
+| CLI-002 | Ipê Serviços Ltda. | Gestão HZ | 60 | 6000.00 | 0.05 | 5700.00 |
+| CLI-003 | Farol Logística Ltda. | Gestão HZ | 150 | 15000.00 | 0.20 | 12000.00 |
+| CLI-004 | Nuvem Comércio Ltda. | Gestão HZ | 40 | 4000.00 | 0.00 | 4000.00 |
+
+Total líquido: **R$ 30.700,00/mês**. Fórmula: bruto × (1 − desconto). Valores são sementes de teste sem cotação ou observação de mercado. Antes do fechamento, o agente comum não recebe esta tabela. Após fechamento, leitura excepcional segue P05 e solicitação de preço segue P07. Não colocar D07 no contexto geral do modelo para depois afirmar que seu acesso foi bloqueado.

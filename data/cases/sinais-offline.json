@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.1",
+  "source": "config/jev-1.0.json",
+  "contract_version": "JEV-1.0",
+  "contract_status": "candidato_aguardando_aprovacao_do_pesquisador",
+  "executable": true,
+  "approved_for_item_3": false,
+  "response_schema": "schemas/jev-resposta-1.0.schema.json",
+  "profiles": {
+    "leitura": {
+      "contract_version": "JEV-1.0",
+      "gun_jumping": 0.0,
+      "informacao_restrita": 0.0,
+      "dados_pessoais": 0.0,
+      "efeito_externo": 0.0,
+      "natureza": {
+        "escolha": "analitica",
+        "confianca": 1.0
+      },
+      "criticidade": {
+        "score": 0.0,
+        "confianca": 1.0
+      }
+    },
+    "email": {
+      "contract_version": "JEV-1.0",
+      "gun_jumping": 0.0,
+      "informacao_restrita": 0.0,
+      "dados_pessoais": 0.0,
+      "efeito_externo": 1.0,
+      "natureza": {
+        "escolha": "comunicacao",
+        "confianca": 1.0
+      },
+      "criticidade": {
+        "score": 0.0,
+        "confianca": 1.0
+      }
+    },
+    "preco": {
+      "contract_version": "JEV-1.0",
+      "gun_jumping": 0.0,
+      "informacao_restrita": 0.0,
+      "dados_pessoais": 0.0,
+      "efeito_externo": 1.0,
+      "natureza": {
+        "escolha": "comunicacao",
+        "confianca": 1.0
+      },
+      "criticidade": {
+        "score": 0.0,
+        "confianca": 1.0
+      }
+    },
+    "migracao": {
+      "contract_version": "JEV-1.0",
+      "gun_jumping": 0.0,
+      "informacao_restrita": 0.0,
+      "dados_pessoais": 0.0,
+      "efeito_externo": 1.0,
+      "natureza": {
+        "escolha": "integracao",
+        "confianca": 1.0
+      },
+      "criticidade": {
+        "score": 0.0,
+        "confianca": 1.0
+      }
+    }
+  },
+  "profile_note": "Respostas deliberadamente favoráveis e sintéticas para isolar controles determinísticos. Zero risco não é rótulo verdadeiro do caso nem autoriza uma proibição; confiança 1 não indica desempenho real.",
+  "incomplete_response_T23": {
+    "gun_jumping": 0.1
+  },
+  "timeout_T24": {
+    "seconds": 6,
+    "limit_seconds": 5
+  }
+}

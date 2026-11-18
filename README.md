@@ -2,7 +2,7 @@
 
 Projeto acadêmico IBMEC sobre controle de ações, riscos e responsabilidades de agentes de IA no contexto de fusões e aquisições.
 
-**Estado em 17/11/2026:** repositório documental e de dados. O notebook e o agente serão reconstruídos do zero. Não há notebook, implementação, teste executado ou resultado novo neste repositório.
+**Estado em 17/11/2026:** documentos, estados e 56 casos materializados, com carregador e verificações de integridade dos dados. O notebook, o agente e o controlador ainda serão construídos. Não há nova execução do experimento nem resultados do agente.
 
 ## Comece por aqui
 
@@ -31,15 +31,19 @@ guardiao-gate/
 ├── data/
 │   ├── raw/             cópias integrais dos datasets originais
 │   ├── provenance/      fontes e hashes
-│   ├── fixtures/        reservado para documentos de entrada separados
-│   └── cases/           reservado para casos e configurações carregáveis
+│   ├── fixtures/        documentos e variantes, com manifesto de integridade
+│   └── cases/           casos, configurações e oráculos separados
+├── scripts/             materialização e validação dos dados
+├── src/guardiao_gate/   carregador de dados; controlador ainda pendente
+├── tests/               verificações da preparação dos dados
 ├── notebooks/           reservado para reconstrução futura
 └── results/             reservado para novas execuções
 ```
 
 ## Limites desta etapa
 
-- Os sete documentos D01–D07, dez estados e 56 casos estão **especificados em Markdown**, não materializados para execução.
+- Os sete documentos D01–D07, dez estados e 56 casos foram exportados para arquivos carregáveis. Consulte o [guia de uso e validação](data/cases/README.md).
+- O [contrato candidato JEV-1.0](docs/especificacao/contrato-jev.md) tem esquemas e perfis offline completos. O início do núcleo offline aguarda aprovação do pesquisador; nenhum controlador ou experimento foi executado.
 - A política MA-SIM-1.0 é uma referência provisória; a validação humana qualificada permanece pendente.
 - As entrevistas são públicas/documentais; a baseline é sintética, não medição empresarial.
 - Os documentos Word e PowerPoint foram copiados integralmente, sem revisão de conteúdo. O estado atual desta página e do planejamento prevalece sobre descrições da implementação anterior.

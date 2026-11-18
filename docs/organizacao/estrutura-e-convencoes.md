@@ -11,8 +11,13 @@
 | `docs/historico/` | cópias de versões anteriores | carregar como fonte vigente do simulador |
 | `data/raw/` | arquivos originais dos datasets | editar corpus ou usar dados restritos como contexto geral |
 | `data/provenance/` | origem e integridade | apagar avisos de licença |
-| `data/fixtures/` | futuras entradas separadas | colocar oráculos junto das entradas do agente |
-| `data/cases/` | futuros casos, estados e configurações | credenciais ou resultados observados |
+| `data/fixtures/` | entradas separadas, D07 restrito e manifesto | colocar oráculos junto das entradas do agente |
+| `data/cases/` | casos, estados, configurações e oráculos em subpasta própria | credenciais, resultados observados ou envio do pacote ao agente |
+| `config/` | configuração canônica versionada do contrato JEV e seu estado de aprovação | credenciais, escores reais ou aprovações fictícias como aceite humano |
+| `schemas/` | contratos estruturais JSON de entrada e resposta | confundir validação de formato com autorização |
+| `scripts/` | exportação e verificação dos dados | executar ações de negócio |
+| `src/guardiao_gate/` | carregador reutilizável; futuros componentes do experimento | embutir respostas esperadas no contexto do agente |
+| `tests/` | verificações automatizadas da implementação | apresentar verificações de dados como resultados do agente |
 | `notebooks/` | futura interface de experimentação | concentrar todas as regras e responsabilidades |
 | `results/` | futuras saídas por rodada | sobrescrever histórico ou misturar execuções |
 
