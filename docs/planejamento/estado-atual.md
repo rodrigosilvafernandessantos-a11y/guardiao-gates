@@ -1,6 +1,6 @@
 # Estado atual e pendências
 
-Data: 18/11/2026. Este registro inclui a materialização dos dados e a execução inicial do núcleo offline de `guardiao-gate`. Não houve execução com modelo nem avaliação completa do piloto.
+Data: 18/11/2026. Este registro inclui a materialização, o núcleo e a avaliação completa dos 56 casos offline de `guardiao-gate`. Não houve execução com modelo ou aplicação empresarial.
 
 ## Decisões de organização
 
@@ -17,22 +17,22 @@ Data: 18/11/2026. Este registro inclui a materialização dos dados e a execuç�
 | Problema | tarefa de revisão de pedidos no contexto de M&A | recorte acadêmico fundamentado documentalmente |
 | Evidências | entrevistas públicas e fontes complementares | não são entrevistas próprias |
 | Baseline | hipóteses, configuração e fórmulas B0 | sintética; geração ainda pendente |
-| Política | MA-SIM-1.0, papéis e quatro ferramentas simuladas | controlador básico implementado; controles avançados serão completados no item 4 |
+| Política | MA-SIM-1.0, papéis e quatro ferramentas simuladas | controles avançados offline implementados e avaliados na suíte conhecida |
 | Estados | S01–S10 | materializados em JSON, incluindo estados excepcional e inválido |
 | Documentos | D01–D07 | corpos separados, D07 restrito, catálogo com hashes |
 | Ataques | dez pares normal/malicioso | vinte entradas materializadas e escopos separados |
-| Testes | 36 centrais + vinte pareados | três fluxos iniciais executados (T01/T07/T12); suíte completa ainda não executada |
+| Testes | 36 centrais + vinte pareados | 56/56 casos coincidentes na avaliação offline; detalhes no resumo da suíte |
 | Revisão | procedimento e formulário | avaliação humana qualificada pendente |
 
 ## Próxima etapa técnica
 
-O [roadmap do notebook](roadmap-notebook.md), elaborado em 17/11/2026, organiza as atividades abaixo em entregas e critérios de avanço. O item 3 foi autorizado pelo pesquisador e implementado; seu escopo é o dos três fluxos iniciais, com resultados isolados por rodada.
+O [roadmap do notebook](roadmap-notebook.md), elaborado em 17/11/2026, organiza as atividades abaixo em entregas e critérios de avanço. Os itens 3 e 4 foram autorizados e implementados; a suíte completa está avaliada no escopo offline, com resultados isolados por rodada.
 
-- Avançar ao item 4: completar controles e executar a suíte determinística de 56 casos, incluindo concorrência, histórico, mudanças e falhas. O contrato JEV-1.0 está aceito para uso offline.
+- Avançar ao item 5: integrar o controlador, as configurações e os resultados a um notebook reproduzível. O contrato JEV-1.0 está aceito para uso offline.
 - Manter os dados materializados e seus oráculos separados; conferir hashes pelo [guia dos casos](../../data/cases/README.md).
 - Preservar o [núcleo offline implementado](../especificacao/nucleo-offline.md) e suas evidências, ampliando os cenários de forma explícita.
 - Reconstruir o notebook após definir essa separação; nenhum notebook foi criado agora.
-- Executar os testes determinísticos e só depois avaliar o comportamento com modelo.
+- Preservar a execução completa dos 56 casos e definir o desenho final antes de avaliar comportamento com modelo.
 - Gerar os dados de B0 e definir uma comparação de esforço com unidades e casos equivalentes.
 
 ## Materialização concluída
@@ -43,7 +43,7 @@ O contrato JEV-1.0 define entrada, resposta e quatro perfis offline completos. C
 
 ## Núcleo offline implementado
 
-O item 3 contém as quatro ferramentas, o fluxo permitir/escalar/bloquear, aprovação simulada específica, relógio virtual e exportação por rodada. T01 executou uma leitura, T07 bloqueou a solicitação de preço e T12 executou um envio simulado após aprovação, com zero chamadas antes dela. As 32 verificações automatizadas de dados, contrato e núcleo passaram. A avaliação completa permanece no item 4.
+O item 3 contém as quatro ferramentas, o fluxo permitir/escalar/bloquear, aprovação simulada específica, relógio virtual e exportação por rodada. Os primeiros fluxos T01/T07/T12 foram preservados. O item 4 ampliou os controles para os 56 casos, todos coincidentes com os oráculos de decisão, estado final e contagem. As 52 verificações automatizadas passaram. T31/T32 preservam efeitos desconhecidos, T30 explicita falha de auditoria e T33 tem uma invocação entre duas requisições concorrentes. Consulte o [resumo da suíte](../../results/resumo-suite-offline.md).
 
 ## Decisões humanas pendentes
 

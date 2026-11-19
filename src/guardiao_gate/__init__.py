@@ -1,4 +1,4 @@
-"""Dados e contratos do piloto; núcleo básico disponível em guardiao_gate.offline."""
+"""Dados e contratos do piloto; controle e avaliação completos no escopo offline."""
 
 from .dados import PilotData
 

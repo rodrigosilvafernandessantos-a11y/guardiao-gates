@@ -180,5 +180,11 @@
     "actor": "pesquisador",
     "instruction": "Vamos avançar para o item 3 - construir o núcleo offline",
     "scope": "núcleo offline com ferramentas simuladas e sinais fixos; sem modelo, internet ou ações reais"
+  },
+  "approved_for_item_4": true,
+  "item_4_authorization": {
+    "date": "2026-11-18",
+    "actor": "pesquisador",
+    "scope": "completar controles e avaliar os 56 casos offline, sem modelo ou ações reais"
   }
 }

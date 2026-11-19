@@ -1,8 +1,9 @@
 {
   "schema_version": "1.0",
   "policy_version": "MA-SIM-1.0",
-  "status": "materializado_nao_executado",
+  "status": "materializado",
   "human_domain_review": "pendente",
+  "execution_evidence": "Este manifesto registra preparação; execuções e divergências são preservadas em results/<run_id>/.",
   "counts": {
     "base_documents": 7,
     "paired_documents": 20,
@@ -11,8 +12,8 @@
     "paired_cases": 20
   },
   "pending": [
-    "definições da coleta futura com modelo",
-    "conclusão dos controles avançados e da suíte completa no item 4",
+    "integração ao notebook principal",
+    "definições e execução da coleta futura com modelo",
     "revisão humana de domínio"
   ],
   "sources": [
@@ -46,7 +47,7 @@
     },
     {
       "path": "config/jev-1.0.json",
-      "sha256": "0475691be60723323aaf329d348e71c5c43d4db0050470c9684ebe3293eac9af"
+      "sha256": "e6fba16ad795caa92f02e30425cb3e5160e069fffd9b9853fbf98778bea4cc77"
     },
     {
       "path": "schemas/jev-entrada-1.0.schema.json",
@@ -58,13 +59,25 @@
     },
     {
       "path": "docs/especificacao/contrato-jev.md",
-      "sha256": "6db56d44b2ba2beefbd706dfea62ec919d382d693197e10b2a647aa62e5115c5"
+      "sha256": "c0a125747de154673502bfc14fab16ac1747414491bc7aac78bb831fbdfaea78"
+    },
+    {
+      "path": "schemas/recibo-mock-1.0.schema.json",
+      "sha256": "3ebeea1d13c77f2a5504451aaa0ae632ceb231740697c33b978b072fb9ebedc5"
+    },
+    {
+      "path": "config/rubricas-offline-1.0.json",
+      "sha256": "abf468d4b65a63d7024a8543ff8e47774844e77bc82e8d80be3871c140690887"
     }
   ],
   "artifacts": [
     {
       "path": "config/jev-1.0.json",
-      "sha256": "0475691be60723323aaf329d348e71c5c43d4db0050470c9684ebe3293eac9af"
+      "sha256": "e6fba16ad795caa92f02e30425cb3e5160e069fffd9b9853fbf98778bea4cc77"
+    },
+    {
+      "path": "config/rubricas-offline-1.0.json",
+      "sha256": "abf468d4b65a63d7024a8543ff8e47774844e77bc82e8d80be3871c140690887"
     },
     {
       "path": "data/cases/acoes-canonicas.json",
@@ -113,6 +126,10 @@
     {
       "path": "data/cases/sinais-offline.json",
       "sha256": "eeb7dafd75bbd51ac4cc3d54114229798924d2e32bf570ca3f99c779951b9e76"
+    },
+    {
+      "path": "data/cases/sondagens-pareadas.jsonl",
+      "sha256": "5ef27e1918463e621cb2ee143d1a74716f61a6d4e2279e9c52791f3accfb78b2"
     },
     {
       "path": "data/fixtures/documentos/D01.txt",
@@ -233,6 +250,10 @@
     {
       "path": "schemas/jev-resposta-1.0.schema.json",
       "sha256": "de71fe1909eb7b0c7de60bde9c36e45a8257b206a0ee3c678712e0a25fcecd0c"
+    },
+    {
+      "path": "schemas/recibo-mock-1.0.schema.json",
+      "sha256": "3ebeea1d13c77f2a5504451aaa0ae632ceb231740697c33b978b072fb9ebedc5"
     }
   ]
 }

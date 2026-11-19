@@ -17,7 +17,7 @@ Os três diretórios contêm cópias integrais dos arquivos recebidos, inclusive
 - [Casos e resultados esperados](../docs/avaliacao/casos-e-resultados-esperados.md).
 - [Baseline sintética](../docs/avaliacao/baseline-sintetica.md).
 
-O conteúdo foi exportado para [fixtures/](fixtures/README.md) e [cases/](cases/README.md): sete documentos-base, vinte variantes, dez estados e 56 casos carregáveis, com oráculos separados e hashes. O guia de casos explica os formatos, o carregamento e as pendências. Não foram criados dados de execução do agente ou amostras simuladas B0 nesta etapa.
+O conteúdo foi exportado para [fixtures/](fixtures/README.md) e [cases/](cases/README.md): sete documentos-base, vinte variantes, dez estados e 56 casos carregáveis, com oráculos separados e hashes. O guia de casos explica os formatos, o carregamento e as pendências. Os 56 casos já têm [evidências de execução offline](../results/resumo-suite-offline.md), com chamadas predefinidas e sinais fixos. Não houve execução com modelo ou geração de amostras B0.
 
 ## Restauração e versionamento
 

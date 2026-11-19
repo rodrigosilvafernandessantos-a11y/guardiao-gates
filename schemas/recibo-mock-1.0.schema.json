@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Recibo de ferramenta simulada 1.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "invocation_id",
+    "action_id",
+    "tool",
+    "simulated",
+    "status",
+    "confirmed_effects",
+    "confirmed_reads",
+    "output"
+  ],
+  "properties": {
+    "invocation_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "action_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "tool": {
+      "type": "string",
+      "enum": [
+        "ler_documento_data_room",
+        "solicitar_precos_ao_alvo",
+        "propor_migracao_de_sistemas",
+        "enviar_email_ao_vendedor"
+      ]
+    },
+    "simulated": {
+      "type": "boolean",
+      "const": true
+    },
+    "status": {
+      "type": "string",
+      "const": "EXECUTADO"
+    },
+    "confirmed_effects": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "confirmed_reads": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "output": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  }
+}

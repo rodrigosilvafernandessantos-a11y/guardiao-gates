@@ -1,6 +1,6 @@
 # Núcleo offline — item 3
 
-Implementado em 18/11/2026 após autorização explícita do pesquisador. Escopo: quatro ferramentas simuladas, controlador básico, sinais fixos, relógio virtual e evidências dos fluxos iniciais T01/T07/T12. Não usa modelo, API de classificação, internet ou ações externas reais.
+Registro do item 3, implementado em 18/11/2026 após autorização explícita do pesquisador. Atualização: o item 4 já ampliou os controles e avaliou os 56 casos; veja a [avaliação completa](avaliacao-offline-completa.md). Escopo: quatro ferramentas simuladas, controlador básico, sinais fixos, relógio virtual e evidências dos fluxos iniciais T01/T07/T12. Não usa modelo, API de classificação, internet ou ações externas reais.
 
 ## Componentes
 
@@ -34,7 +34,7 @@ O envio automático após aprovação fica limitado ao template processual A_EMA
 
 Uma aprovação simulada é registrada por uma chamada separada do executor confiável. O núcleo calcula o hash da ação e do contexto, preserva a versão do estado, finalidade, argumentos, escopo, documentos e destinatário. No fluxo básico, confere alçada, decisão, prazo de 600 s e consumo único; ao retomar, revalida estado, parada e auditoria. A identidade é de teste, sem autenticação humana real.
 
-A aprovação específica de T12 e as alçadas das outras ferramentas foram exercitadas em verificações unitárias. Reutilização entre rodadas, concorrência, respostas tardias e toda a injeção de falhas da suíte ainda exigem o trabalho sistemático do item 4.
+A aprovação específica de T12 e as alçadas das outras ferramentas foram exercitadas em verificações unitárias. Reutilização entre rodadas, concorrência, respostas tardias e toda a injeção de falhas da suíte foram ampliados e avaliados no item 4; este guia preserva o escopo dos três fluxos iniciais.
 
 ## Executar os três fluxos iniciais
 
@@ -67,7 +67,7 @@ A trilha é registrada em memória antes do despacho e exportada ao final; não 
 ## Limites e próximo trabalho
 
 - Esta entrega executa três fluxos iniciais; não conclui a suíte de 56 casos nem mede comportamento do modelo ou qualidade de resumos.
-- O item 4 completará e verificará aprovações e eventos avançados, concorrência, falhas e os 56 casos offline. As verificações atuais não são prova de cobertura dessas condições.
+- O item 4 ampliou as aprovações, eventos, concorrência e falhas e avaliou os 56 casos offline. Seus resultados estão na avaliação completa vinculada acima.
 - O notebook principal ainda será construído no item 5. O núcleo é reutilizável para essa integração.
 - A compatibilidade da interface nativa da Typesafe e a coleta com modelos continuam pendentes. O contrato normalizado funciona aqui somente com sinais fixos.
 - Revisão humana qualificada permanece pendente; as referências da política são provisórias.

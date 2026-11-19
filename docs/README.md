@@ -24,7 +24,9 @@ Este é o índice vigente. Os documentos em `historico/` preservam versões ante
 - [Documentos sintéticos D01–D07](especificacao/documentos-do-piloto.md).
 - [Aprovações específicas e falhas](especificacao/aprovacoes-e-falhas.md).
 - [Contrato JEV-1.0 — uso offline autorizado](especificacao/contrato-jev.md).
-- [Núcleo offline: execução e limites](especificacao/nucleo-offline.md).
+- [Núcleo offline inicial: execução e limites](especificacao/nucleo-offline.md).
+- [Avaliação completa dos 56 casos offline](especificacao/avaliacao-offline-completa.md).
+- [Resumo dos resultados da suíte](../results/resumo-suite-offline.md).
 
 ## Avaliação
 

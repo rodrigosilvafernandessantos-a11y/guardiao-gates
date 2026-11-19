@@ -15,8 +15,8 @@
 | `data/cases/` | casos, estados, configurações e oráculos em subpasta própria | credenciais, resultados observados ou envio do pacote ao agente |
 | `config/` | configuração canônica versionada do contrato JEV e seu estado de aprovação | credenciais, escores reais ou aprovações fictícias como aceite humano |
 | `schemas/` | contratos estruturais JSON de entrada e resposta | confundir validação de formato com autorização |
-| `scripts/` | exportação, verificação e execução dos três fluxos offline iniciais | executar ações de negócio |
-| `src/guardiao_gate/` | carregador, contratos e núcleo offline básico reutilizável | embutir respostas esperadas no contexto do agente |
+| `scripts/` | exportação, verificação e execução dos fluxos iniciais e da suíte offline de 56 casos | executar ações de negócio |
+| `src/guardiao_gate/` | carregador, contratos, autorizações e execução/avaliação offline reutilizáveis | embutir respostas esperadas no contexto do agente |
 | `tests/` | verificações automatizadas da implementação | apresentar verificações de dados como resultados do agente |
 | `notebooks/` | futura interface de experimentação | concentrar todas as regras e responsabilidades |
 | `results/` | futuras saídas por rodada | sobrescrever histórico ou misturar execuções |

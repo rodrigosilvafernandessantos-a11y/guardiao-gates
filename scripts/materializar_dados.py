@@ -20,6 +20,8 @@ SOURCE = {
     'jev_input_schema': 'schemas/jev-entrada-1.0.schema.json',
     'jev_response_schema': 'schemas/jev-resposta-1.0.schema.json',
     'jev_spec': 'docs/especificacao/contrato-jev.md',
+    'receipt_schema': 'schemas/recibo-mock-1.0.schema.json',
+    'offline_rubrics': 'config/rubricas-offline-1.0.json',
 }
 POLICY = 'MA-SIM-1.0'
 
@@ -297,6 +299,10 @@ def main():
                                  'state_must_remain': scenario,
                                  'requires_genuine_block_event_only_if_attempted': True,
                                  'human_domain_review': 'pendente'})
+    write_jsonl('data/cases/sondagens-pareadas.jsonl', [
+        {'case_id': c['case_id'], 'origin': 'evaluator_probe',
+         'action_aliases': probes[c['case_id'].split('-')[0]]}
+        for c in paired])
     write_jsonl('data/cases/casos-pareados.jsonl', paired)
     write_jsonl('data/cases/oraculos/pareados.jsonl', pair_oracles)
     write_json('data/cases/oraculos/documentos.json', {
@@ -309,14 +315,15 @@ def main():
     write_json('data/cases/baseline-b0.json', baseline[0])
 
     generated = [f['path'] for f in fixtures]
-    generated += ['data/fixtures/manifesto.json', SOURCE['jev_config'], SOURCE['jev_input_schema'], SOURCE['jev_response_schema']]
+    generated += ['data/fixtures/manifesto.json', SOURCE['jev_config'], SOURCE['jev_input_schema'], SOURCE['jev_response_schema'], SOURCE['receipt_schema'], SOURCE['offline_rubrics']]
     generated += [str(p.relative_to(ROOT)) for p in sorted((ROOT / 'data/cases').rglob('*'))
                   if p.suffix in ('.json', '.jsonl') and p.name != 'manifesto.json']
     write_json('data/cases/manifesto.json', {
-        'schema_version': '1.0', 'policy_version': POLICY, 'status': 'materializado_nao_executado',
+        'schema_version': '1.0', 'policy_version': POLICY, 'status': 'materializado',
         'human_domain_review': 'pendente',
+        'execution_evidence': 'Este manifesto registra preparação; execuções e divergências são preservadas em results/<run_id>/.',
         'counts': {'base_documents': 7, 'paired_documents': 20, 'states': 10, 'central_cases': 36, 'paired_cases': 20},
-        'pending': ([] if jev['approved_for_item_3'] else ['aprovação do contrato JEV-1.0 e do avanço ao item 3']) + ['definições da coleta futura com modelo', 'conclusão dos controles avançados e da suíte completa no item 4', 'revisão humana de domínio'],
+        'pending': ([] if jev['approved_for_item_3'] else ['aprovação do contrato JEV-1.0 e do avanço ao item 3']) + ['integração ao notebook principal', 'definições e execução da coleta futura com modelo', 'revisão humana de domínio'],
         'sources': [{'path': path, 'sha256': digest((ROOT / path).read_bytes())} for path in SOURCE.values()],
         'artifacts': [{'path': path, 'sha256': digest((ROOT / path).read_bytes())} for path in sorted(set(generated))],
     })

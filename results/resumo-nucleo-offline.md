@@ -1,5 +1,7 @@
 # Resumo revisado do núcleo offline — item 3
 
+Registro da rodada inicial, preservado. A avaliação posterior dos 56 casos está no [resumo do item 4](resumo-suite-offline.md).
+
 Data: 18/11/2026. Rodada de referência: `offline-20261118T211245Z-adac398e`.
 
 O pesquisador autorizou a construção offline em 18/11/2026. Esta rodada executou apenas os três fluxos iniciais previstos no roadmap, com chamadas predefinidas e sinais fixos. Não houve chamada ao JEV da Typesafe, geração de resposta por modelo ou ação externa real.

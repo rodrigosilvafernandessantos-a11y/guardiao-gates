@@ -83,6 +83,6 @@ Verificações adicionais de contrato ficam separadas dos 56 casos do piloto: ca
 
 ## 6. Aprovação e próximo passo
 
-O pesquisador autorizou o avanço ao item 3 em 18/11/2026. A configuração registra `approved_for_item_3=true` e o escopo limitado à construção offline. Os primeiros fluxos foram implementados e executados; a avaliação completa de aprovações e falhas será concluída no item 4.
+O pesquisador autorizou o avanço ao item 3 em 18/11/2026. A configuração registra `approved_for_item_3=true` e o escopo limitado à construção offline. Os primeiros fluxos foram implementados e executados; a avaliação completa de aprovações e falhas também foi concluída no item 4, mantendo este contrato normalizado e os sinais fixos. Veja a [avaliação completa](avaliacao-offline-completa.md).
 
 Amostragem com modelo, comparação com/sem controlador, repetições finais, rubrica de utilidade, provedor e orçamento permanecem decisões da coleta futura; não impedem construir o núcleo offline após aprovação, mas precisam estar congelados antes das rodadas correspondentes. A revisão de domínio permanece necessária para alegar validação humana da política.

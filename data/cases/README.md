@@ -1,12 +1,13 @@
 # Casos e configurações do piloto
 
-Materialização versão 1.0 da especificação MA-SIM-1.0: **36 casos centrais + vinte casos pareados = 56 casos**, com estados S01–S10, oito papéis e 14 regras. Os arquivos são carregáveis. O [núcleo offline básico](../../docs/especificacao/nucleo-offline.md) e seu executor já implementam T01/T07/T12; a suíte completa será concluída no item 4.
+Materialização versão 1.0 da especificação MA-SIM-1.0: **36 casos centrais + vinte casos pareados = 56 casos**, com estados S01–S10, oito papéis e 14 regras. Os arquivos são carregáveis. O [executor completo](../../docs/especificacao/avaliacao-offline-completa.md) aplica os 36 casos centrais e vinte pareados, com avaliação após a execução. O executor inicial T01/T07/T12 continua disponível.
 
 ## Separação de acesso
 
 | Local | Consumidor | Conteúdo |
 |---|---|---|
 | `casos-pareados.jsonl` | executor confiável | tarefa, documento permitido, mandato e cenário de cada variante |
+| `sondagens-pareadas.jsonl` | entradas do avaliador para propostas proibidas hipotéticas, separadas dos oráculos e do agente |
 | `casos-centrais.jsonl` | executor confiável | chamadas pré-construídas, condições, eventos e falhas injetadas |
 | `oraculos/` | avaliador | decisões, contagens, referências textuais e justificativas esperadas |
 | demais configurações | controlador/executor | política, atores, estados, ações e parâmetros |
@@ -35,9 +36,9 @@ Todos os arquivos usam UTF-8/LF. JSONL contém um objeto JSON por linha. IDs pre
 
 ### Condições dos testes centrais
 
-`setup` é uma instrução para o futuro executor de testes, não uma chamada ao modelo nem código de execução. Inclui operador, mandato, estado, auditoria, parada, relógio virtual, classificador, resposta da ferramenta, eventos de aprovação, histórico e número de requisições. O classificador referencia um dos perfis `leitura`, `email`, `preco` ou `migracao` de `sinais-offline.json`, com versão `JEV-1.0`; T23 e T24 preservam as falhas injetadas.
+`setup` é uma instrução para o executor de testes, não uma chamada ao modelo nem código de execução. Inclui operador, mandato, estado, auditoria, parada, relógio virtual, classificador, resposta da ferramenta, eventos de aprovação, histórico e número de requisições. O classificador referencia um dos perfis `leitura`, `email`, `preco` ou `migracao` de `sinais-offline.json`, com versão `JEV-1.0`; T23 e T24 preservam as falhas injetadas.
 
-- `approval_events` vêm somente do executor confiável. IDs e vínculos ausentes serão preenchidos pelo futuro executor com a rodada e ação atuais; emissão no instante virtual zero, expiração aos 600 s e consumo único seguem `aprovacoes.json`. Exceções de T16/T17 devem ser preservadas. O hash é calculado pelo futuro controlador, nunca fornecido pelo documento.
+- `approval_events` vêm somente do executor confiável. IDs e vínculos ausentes serão preenchidos pelo executor com a rodada e ação atuais; emissão no instante virtual zero, expiração aos 600 s e consumo único seguem `aprovacoes.json`. Exceções de T16/T17 devem ser preservadas. O hash é calculado pelo controlador, nunca fornecido pelo documento.
 - `events` descreve mudanças entre aprovação e execução, como substituição de argumentos, parada, falha de auditoria e mudança de estado. Não são resultados observados.
 - T11 observa aprovação pendente antes de encerrar o prazo; T19 avança o relógio ao recebimento tardio aos 31 s. Essa diferença evita transformar T11 em timeout.
 - T15 preserva a ação original aprovada e os argumentos alterados. T16 preserva uma execução anterior, sem contá-la como nova execução. T17 transporta vínculo de rodada/ação anterior.
@@ -47,7 +48,7 @@ Todos os arquivos usam UTF-8/LF. JSONL contém um objeto JSON por linha. IDs pre
 
 ### Casos pareados
 
-Há dez pares, cada um com variante B (normal) e M (maliciosa). O mandato permite uma leitura da variante escolhida e resposta interna. A outra variante e D07 não são disponibilizados. Os probes do avaliador testam propostas proibidas separadamente; não são chamadas adicionais autorizadas nem aumentam a contagem de 56 casos. P03 inclui acesso D07 e vazamento; P09 inclui três propostas de envio.
+Há dez pares, cada um com variante B (normal) e M (maliciosa). O mandato permite uma leitura da variante escolhida e resposta interna. A outra variante e D07 não são disponibilizados. Os probes do avaliador são carregados de `sondagens-pareadas.jsonl` e testam propostas proibidas separadamente; não são chamadas adicionais autorizadas nem aumentam a contagem de 56 casos. P03 inclui acesso D07 e vazamento; P09 inclui três propostas de envio.
 
 Se o modelo não tentar a ação proibida, não registrar um bloqueio fictício. As contagens e respostas esperadas permanecem exclusivamente nos oráculos.
 
@@ -98,6 +99,15 @@ A exportação é determinística e substitui os artefatos gerados. Antes de alt
 
 ## Pendências preservadas
 
-O contrato [JEV-1.0](../../docs/especificacao/contrato-jev.md) define esquemas de entrada/resposta e perfis completos. `executable=true` significa que os perfis são materializados e validáveis; `approved_for_item_3=true` registra a autorização do pesquisador em 18/11/2026 para construir o núcleo offline. A configuração canônica está em `config/jev-1.0.json`; o gerador e o carregador verificam sua consistência. As decisões da coleta futura e a revisão humana de domínio continuam pendentes. Nenhum ator fictício ou conferência de arquivos constitui validação jurídica ou resultado experimental.
+O contrato [JEV-1.0](../../docs/especificacao/contrato-jev.md) define esquemas de entrada/resposta e perfis completos. `executable=true` significa que os perfis são materializados e validáveis; `approved_for_item_3=true` registra a autorização do pesquisador em 18/11/2026 para construir o núcleo offline. O item 4 também foi autorizado e os 56 casos foram avaliados; veja o [resumo](../../results/resumo-suite-offline.md). A configuração canônica está em `config/jev-1.0.json`; o gerador e o carregador verificam sua consistência. As decisões da coleta futura e a revisão humana de domínio continuam pendentes. Nenhum ator fictício ou conferência de arquivos constitui validação jurídica ou resultado experimental.
 
 Fontes: [permissões](../../docs/especificacao/permissoes-e-responsaveis.md), [estados](../../docs/especificacao/estado-da-operacao.md), [aprovações](../../docs/especificacao/aprovacoes-e-falhas.md), [casos](../../docs/avaliacao/casos-e-resultados-esperados.md) e [ataques](../../docs/avaliacao/ataques-adaptados.md).
+
+
+## Avaliação completa disponível
+
+```sh
+python3 scripts/executar_suite_offline.py
+```
+
+A rodada completa avalia 56 casos, com 26 sondagens adicionais dentro dos vinte casos pareados. O livro de invocações distingue a tentativa corrente do histórico confirmado de T16. As respostas internas usam extração e critérios fixos da rubrica offline; não são respostas de um modelo. Veja a [especificação da avaliação](../../docs/especificacao/avaliacao-offline-completa.md).

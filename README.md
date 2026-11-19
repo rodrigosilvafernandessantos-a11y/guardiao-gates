@@ -2,7 +2,7 @@
 
 Projeto acadêmico IBMEC sobre controle de ações, riscos e responsabilidades de agentes de IA no contexto de fusões e aquisições.
 
-**Estado em 18/11/2026:** núcleo offline implementado com quatro ferramentas simuladas, fluxo básico de decisão, aprovação e trilha de execução. Os fluxos iniciais T01/T07/T12 foram executados com sinais fixos. A suíte completa de 56 casos, o notebook principal e as rodadas com modelos ainda estão pendentes.
+**Estado em 18/11/2026:** controles offline completados e 56 casos avaliados (36 centrais + vinte pareados), com sinais fixos e efeitos simulados. Há aprovação vinculada, reserva atômica, tratamento de falhas e evidências por rodada. O notebook principal e as rodadas com modelos ainda estão pendentes.
 
 ## Comece por aqui
 
@@ -12,7 +12,8 @@ Projeto acadêmico IBMEC sobre controle de ações, riscos e responsabilidades d
 4. [Catálogo de dados e proveniência](data/README.md).
 5. [Organização e regras de nomes](docs/organizacao/estrutura-e-convencoes.md).
 6. [Roadmap de construção do notebook experimental](docs/planejamento/roadmap-notebook.md).
-7. [Executar o núcleo offline](docs/especificacao/nucleo-offline.md).
+7. [Executar os 56 casos offline](docs/especificacao/avaliacao-offline-completa.md).
+8. [Resumo dos resultados da suíte](results/resumo-suite-offline.md).
 
 ## Estrutura
 
@@ -35,8 +36,8 @@ guardiao-gate/
 │   ├── fixtures/        documentos e variantes, com manifesto de integridade
 │   └── cases/           casos, configurações e oráculos separados
 ├── scripts/             materialização, validação e execução offline
-├── src/guardiao_gate/   carregador, contratos e núcleo offline básico
-├── tests/               verificações de dados, contrato e núcleo offline
+├── src/guardiao_gate/   contratos, controlador e avaliação offline completa
+├── tests/               verificações de dados, contratos e controles avançados
 ├── notebooks/           reservado para reconstrução futura
 └── results/             rodadas isoladas e resumos de evidências
 ```
@@ -44,7 +45,7 @@ guardiao-gate/
 ## Limites desta etapa
 
 - Os sete documentos D01–D07, dez estados e 56 casos foram exportados para arquivos carregáveis. Consulte o [guia de uso e validação](data/cases/README.md).
-- O [contrato JEV-1.0](docs/especificacao/contrato-jev.md) foi autorizado para a construção offline. Os três fluxos iniciais coincidem com suas referências; isso não demonstra cobertura dos 56 casos nem comportamento do JEV real.
+- O [contrato JEV-1.0](docs/especificacao/contrato-jev.md) foi autorizado para a construção offline. Os 56 casos foram executados e avaliados no escopo offline; isso não mede comportamento do JEV real nem generalização para casos não vistos.
 - A política MA-SIM-1.0 é uma referência provisória; a validação humana qualificada permanece pendente.
 - As entrevistas são públicas/documentais; a baseline é sintética, não medição empresarial.
 - Os documentos Word e PowerPoint foram copiados integralmente, sem revisão de conteúdo. O estado atual desta página e do planejamento prevalece sobre descrições da implementação anterior.

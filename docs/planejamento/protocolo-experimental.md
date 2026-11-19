@@ -1,6 +1,6 @@
 # Protocolo experimental — Guardião Gate
 
-Versão: 0.4. Data: 18/11/2026. Estado: núcleo offline autorizado e implementado; três fluxos iniciais executados com sinais fixos. Protocolo global da coleta com modelo ainda não congelado. Nenhuma execução com modelo realizada.
+Versão: 0.5. Data: 18/11/2026. Estado: item 4 autorizado; controles avançados implementados e 56 casos offline avaliados com sinais fixos. Protocolo da coleta com modelo ainda não congelado. Nenhuma execução com modelo realizada.
 
 Este registro desenvolve a etapa 1 do [roadmap do notebook](roadmap-notebook.md). O pesquisador confirmou a pergunta central, as perguntas específicas e o foco principal em segurança, utilidade e rastreabilidade. A comparação de processo B0/B1 permanece secundária. Condições comparativas, amostra e parâmetros ainda serão definidos.
 
@@ -93,4 +93,15 @@ Em 18/11/2026, o pesquisador instruiu: “Vamos avançar para o item 3 - constru
 
 Foram implementados o controlador básico, quatro ferramentas simuladas, relógio virtual, aprovação pelo executor confiável e exportação de evidências. Os três fluxos iniciais T01/T07/T12 foram executados e comparados aos oráculos após a execução. O envio de T12 teve zero chamadas antes da aprovação simulada e uma depois.
 
-A [versão 0.3](protocolo-experimental-v0.3.md) preserva o estado anterior à autorização. A suíte completa de 56 casos e os controles avançados pertencem ao item 4; não estão concluídos nesta entrega. O [guia do núcleo](../especificacao/nucleo-offline.md) descreve execução e limites.
+A [versão 0.3](protocolo-experimental-v0.3.md) preserva o estado anterior à autorização. Na entrega do item 3, a suíte completa de 56 casos e os controles avançados ainda não estavam concluídos; o andamento do item 4 está registrado abaixo. O [guia do núcleo](../especificacao/nucleo-offline.md) descreve execução e limites.
+
+
+## 8. Autorização e entrega do item 4
+
+Em 18/11/2026, o pesquisador autorizou completar os controles e avaliar os 56 casos. A autorização está registrada em `config/jev-1.0.json` como `approved_for_item_4=true`; não altera o escopo de sinais fixos, ferramentas simuladas e ausência de modelo.
+
+Foram implementados registro de autorizações separado, consumo/reserva atômicos, invalidação por mudanças, prazos, respostas inválidas, falhas de auditoria e recibos, reconciliação e proteção contra repetição. Os oráculos e textos existentes foram preservados. A nova rubrica offline operacionaliza referências já documentadas e não representa medida de utilidade de modelo.
+
+O executor completo consulta oráculos somente após obter os resultados. As 26 sondagens dos vinte casos pareados ficam em arquivo de entrada exclusivo do avaliador e não contam como propostas de modelo. T33 usa duas threads reais com barreira e uma autorização compartilhada. T16 produz histórico por execução do mock, sem preencher contadores artificialmente.
+
+Ver [avaliação offline completa](../especificacao/avaliacao-offline-completa.md) e [resumo dos resultados](../../results/resumo-suite-offline.md). A versão anterior está preservada em [protocolo v0.4](protocolo-experimental-v0.4.md). O próximo item é integrar os componentes ao notebook reproduzível; nenhuma coleta com modelo foi autorizada ou executada nesta etapa.
