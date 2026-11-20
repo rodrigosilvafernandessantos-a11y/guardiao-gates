@@ -1,0 +1,18 @@
+{
+  "first_run": "suite-offline-20261120T002310Z-f435bd4d",
+  "second_run": "suite-offline-20261120T022136Z-894b4c07",
+  "same_inputs": true,
+  "same_code": true,
+  "same_environment": true,
+  "same_parameters": true,
+  "same_case_outcomes": true,
+  "changed_cases": [],
+  "same_metrics": true,
+  "reproduced": true,
+  "ignored_expected_variation": [
+    "identificadores",
+    "timestamps",
+    "hashes vinculados à rodada",
+    "ordem do vencedor e IDs de threads em T33"
+  ]
+}
