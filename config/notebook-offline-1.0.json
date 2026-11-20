@@ -1,0 +1,24 @@
+{
+  "config_version": "NB-OFFLINE-1.0",
+  "mode": "offline",
+  "model_enabled": false,
+  "output_parent": "results",
+  "strict_dependency_versions": true,
+  "python_minimum": [
+    3,
+    11
+  ],
+  "python_reference": "3.12.8",
+  "reference_platform": "Darwin",
+  "requirements_file": "requirements-notebook.txt",
+  "notebook_file": "notebooks/experimento-guardiao-gate.ipynb",
+  "expected_cases": {
+    "central": 36,
+    "paired": 20,
+    "total": 56
+  },
+  "execution_policy": "nova pasta por rodada; não sobrescrever resultados ou artefatos de análise",
+  "model_stage_status": "não integrada; não executar nesta versão",
+  "baseline_stage_status": "configuração B0 disponível; geração e comparação B0/B1 ainda não executadas",
+  "human_domain_review": "pendente"
+}

@@ -291,7 +291,7 @@ def _approval_compliance(results):
             'ratio': valid / executed if executed else None}
 
 
-def export_full_run(root, *, output_parent=None):
+def export_full_run(root, *, output_parent=None, execution_context=None):
     root = Path(root).resolve()
     data = PilotData(root)
     integrity = data.validate()
@@ -302,6 +302,14 @@ def export_full_run(root, *, output_parent=None):
     output = (Path(output_parent) if output_parent is not None else root / 'results') / run_id
     output.mkdir(parents=True, exist_ok=False)
     (output / '.incomplete').write_text('Rodada em execução; não interpretar como resultado completo.\n', encoding='utf-8')
+    if execution_context is not None:
+        _write_json(output / 'contexto-execucao.json', execution_context)
+        if execution_context.get('entrypoint') == 'notebook':
+            source = root / 'notebooks/experimento-guardiao-gate.ipynb'
+            source_bytes = source.read_bytes()
+            if hashlib.sha256(source_bytes).hexdigest() != execution_context['source_notebook_sha256']:
+                raise ValueError('Notebook mudou entre preparação e execução')
+            (output / 'notebook-fonte.ipynb').write_bytes(source_bytes)
     results = []
     case_ids = sorted(data.central) + sorted(data.paired)
     for cid in case_ids:
@@ -392,11 +400,13 @@ def export_full_run(root, *, output_parent=None):
                     for p in (root/folder).glob('*') if p.suffix in ('.py','.json')} |
                    {'scripts/executar_suite_offline.py','scripts/materializar_dados.py','data/cases/manifesto.json',
                     'docs/planejamento/protocolo-experimental.md','docs/especificacao/avaliacao-offline-completa.md'})
+    if execution_context is not None:
+        paths += [p for p in ('notebooks/experimento-guardiao-gate.ipynb', 'config/notebook-offline-1.0.json', 'requirements-notebook.txt', 'scripts/executar_notebook.py') if (root/p).is_file()]
     manifest = {'run_id':run_id,'status':'completed','created_at_utc':datetime.now(timezone.utc).isoformat(),
                 'python_version':platform.python_version(),'code_revision':revision,'working_tree_dirty':dirty,
                 'policy_version':'MA-SIM-1.0','contract_version':'JEV-1.0','case_ids':case_ids,'integrity':integrity,
                 'code_and_configuration':[{'path':p,'sha256':hashlib.sha256((root/p).read_bytes()).hexdigest()} for p in paths],
-                'data_artifacts':copy.deepcopy(data.manifest['artifacts']),
+                'data_artifacts':copy.deepcopy(data.manifest['artifacts']), 'execution_context':copy.deepcopy(execution_context),
                 'output_artifacts':[{'path':p.name,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for p in sorted(output.iterdir()) if p.name not in ('manifesto.json','.incomplete')]}
     _write_json(output / 'manifesto.json', manifest)
     (output / '.incomplete').unlink()

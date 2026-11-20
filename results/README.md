@@ -8,3 +8,10 @@ Subpastas geradas continuam fora do Git. Os resumos revisados podem ser versiona
 
 
 Para uma nova rodada completa, executar `python3 scripts/executar_suite_offline.py`. Cada pasta `suite-offline-*` preserva os 56 resultados, inclusive divergências e falhas, e inclui a rubrica de extração aplicada aos pares. Uma rodada com falhas esperadas e status corretos pode coincidir com o oráculo; isso não elimina os efeitos desconhecidos ou a indisponibilidade de auditoria registrados.
+
+
+## Rodadas do notebook
+
+O [notebook principal](../notebooks/experimento-guardiao-gate.ipynb) chama a mesma suíte, acrescentando contexto, ambiente e cópia da fonte salva. A análise fica em `suite-offline-*/analise-notebook/`, com manifesto próprio. Pelo comando `scripts/executar_notebook.py`, essa pasta também recebe a cópia executada do notebook e o registro do kernel novo.
+
+Erros de células geram uma cópia parcial e diagnóstico em `notebook-falhou-*`. Uma rodada já produzida não é eliminada por erro posterior de análise. Veja o [resumo da validação do item 5](resumo-notebook-reproduzivel.md).

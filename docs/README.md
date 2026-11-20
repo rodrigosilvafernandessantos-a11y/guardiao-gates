@@ -26,6 +26,8 @@ Este é o índice vigente. Os documentos em `historico/` preservam versões ante
 - [Contrato JEV-1.0 — uso offline autorizado](especificacao/contrato-jev.md).
 - [Núcleo offline inicial: execução e limites](especificacao/nucleo-offline.md).
 - [Avaliação completa dos 56 casos offline](especificacao/avaliacao-offline-completa.md).
+- [Notebook reproduzível: preparação e execução](especificacao/notebook-reproduzivel.md).
+- [Notebook principal](../notebooks/experimento-guardiao-gate.ipynb).
 - [Resumo dos resultados da suíte](../results/resumo-suite-offline.md).
 
 ## Avaliação

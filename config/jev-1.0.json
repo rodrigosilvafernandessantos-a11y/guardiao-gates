@@ -186,5 +186,11 @@
     "date": "2026-11-18",
     "actor": "pesquisador",
     "scope": "completar controles e avaliar os 56 casos offline, sem modelo ou ações reais"
+  },
+  "approved_for_item_5": true,
+  "item_5_authorization": {
+    "date": "2026-11-19",
+    "actor": "pesquisador",
+    "scope": "montar e executar o notebook reproduzível offline, preservando registros de cada rodada; sem integrar modelo real ou executar B0/B1"
   }
 }

@@ -47,7 +47,7 @@
     },
     {
       "path": "config/jev-1.0.json",
-      "sha256": "e6fba16ad795caa92f02e30425cb3e5160e069fffd9b9853fbf98778bea4cc77"
+      "sha256": "564ab85db91f682e530da6d613b2e8db00a8f92fca54ef6b0024d269375e115e"
     },
     {
       "path": "schemas/jev-entrada-1.0.schema.json",
@@ -73,7 +73,7 @@
   "artifacts": [
     {
       "path": "config/jev-1.0.json",
-      "sha256": "e6fba16ad795caa92f02e30425cb3e5160e069fffd9b9853fbf98778bea4cc77"
+      "sha256": "564ab85db91f682e530da6d613b2e8db00a8f92fca54ef6b0024d269375e115e"
     },
     {
       "path": "config/rubricas-offline-1.0.json",

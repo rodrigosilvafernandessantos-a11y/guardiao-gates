@@ -1,6 +1,6 @@
 # Protocolo experimental — Guardião Gate
 
-Versão: 0.5. Data: 18/11/2026. Estado: item 4 autorizado; controles avançados implementados e 56 casos offline avaliados com sinais fixos. Protocolo da coleta com modelo ainda não congelado. Nenhuma execução com modelo realizada.
+Versão: 0.6. Data: 19/11/2026. Estado: item 5 autorizado; notebook de preparação, execução e análise implementado no modo offline. A coleta com modelo ainda não foi integrada ou executada.
 
 Este registro desenvolve a etapa 1 do [roadmap do notebook](roadmap-notebook.md). O pesquisador confirmou a pergunta central, as perguntas específicas e o foco principal em segurança, utilidade e rastreabilidade. A comparação de processo B0/B1 permanece secundária. Condições comparativas, amostra e parâmetros ainda serão definidos.
 
@@ -104,4 +104,15 @@ Foram implementados registro de autorizações separado, consumo/reserva atômic
 
 O executor completo consulta oráculos somente após obter os resultados. As 26 sondagens dos vinte casos pareados ficam em arquivo de entrada exclusivo do avaliador e não contam como propostas de modelo. T33 usa duas threads reais com barreira e uma autorização compartilhada. T16 produz histórico por execução do mock, sem preencher contadores artificialmente.
 
-Ver [avaliação offline completa](../especificacao/avaliacao-offline-completa.md) e [resumo dos resultados](../../results/resumo-suite-offline.md). A versão anterior está preservada em [protocolo v0.4](protocolo-experimental-v0.4.md). O próximo item é integrar os componentes ao notebook reproduzível; nenhuma coleta com modelo foi autorizada ou executada nesta etapa.
+Ver [avaliação offline completa](../especificacao/avaliacao-offline-completa.md) e [resumo dos resultados](../../results/resumo-suite-offline.md). A versão anterior está preservada em [protocolo v0.4](protocolo-experimental-v0.4.md). Na conclusão do item 4, o próximo item era integrar os componentes ao notebook reproduzível. Essa integração foi autorizada no item 5, registrado abaixo; nenhuma coleta com modelo foi executada.
+
+
+## 9. Autorização e entrega do item 5
+
+Em 19/11/2026, o pesquisador autorizou montar o notebook reproduzível para organizar preparação, execução e análise, com preservação dos registros de cada rodada. A configuração registra `approved_for_item_5=true`, sem ampliar a autorização para modelos reais ou B0/B1.
+
+O notebook usa 25 células, sendo 12 de código, e carrega os componentes externos já validados. Confere ambiente e dados, executa os 56 casos, analisa resultados preservados e publica uma análise com manifesto próprio. O comando de execução em kernel Jupyter novo salva uma cópia executada; fonte, parâmetros, versões e hashes são registrados na rodada.
+
+A validação exige duas execuções em kernels novos, uma com diretório de trabalho na raiz e outra em notebooks/, com preservação de ambas. A comparação considera entradas, código, ambiente, parâmetros, métricas e resultados por caso, ignorando somente identificadores, timestamps e a ordem não determinística de T33. O [resumo da validação](../../results/resumo-notebook-reproduzivel.md) registra a evidência efetiva.
+
+O [guia do notebook](../especificacao/notebook-reproduzivel.md) descreve preparação, execução e limites. A [versão 0.5](protocolo-experimental-v0.5.md) foi preservada. O próximo item é integrar o agente e o classificador reais, após definir provedor, versão, perguntas configuradas, limites e orçamento da coleta.

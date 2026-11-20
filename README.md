@@ -2,7 +2,7 @@
 
 Projeto acadêmico IBMEC sobre controle de ações, riscos e responsabilidades de agentes de IA no contexto de fusões e aquisições.
 
-**Estado em 18/11/2026:** controles offline completados e 56 casos avaliados (36 centrais + vinte pareados), com sinais fixos e efeitos simulados. Há aprovação vinculada, reserva atômica, tratamento de falhas e evidências por rodada. O notebook principal e as rodadas com modelos ainda estão pendentes.
+**Estado em 19/11/2026:** notebook principal implementado para preparar, executar e analisar os 56 casos offline, com registros isolados por rodada. O controlador e os casos permanecem separados das células. As etapas com modelos reais e B0/B1 ainda não foram executadas.
 
 ## Comece por aqui
 
@@ -14,6 +14,7 @@ Projeto acadêmico IBMEC sobre controle de ações, riscos e responsabilidades d
 6. [Roadmap de construção do notebook experimental](docs/planejamento/roadmap-notebook.md).
 7. [Executar os 56 casos offline](docs/especificacao/avaliacao-offline-completa.md).
 8. [Resumo dos resultados da suíte](results/resumo-suite-offline.md).
+9. [Notebook do experimento](notebooks/experimento-guardiao-gate.ipynb) e [instruções de execução](docs/especificacao/notebook-reproduzivel.md).
 
 ## Estrutura
 
@@ -36,9 +37,9 @@ guardiao-gate/
 │   ├── fixtures/        documentos e variantes, com manifesto de integridade
 │   └── cases/           casos, configurações e oráculos separados
 ├── scripts/             materialização, validação e execução offline
-├── src/guardiao_gate/   contratos, controlador e avaliação offline completa
+├── src/guardiao_gate/   contratos, controlador, execução e análise do notebook
 ├── tests/               verificações de dados, contratos e controles avançados
-├── notebooks/           reservado para reconstrução futura
+├── notebooks/           notebook principal reproduzível, sem outputs antigos
 └── results/             rodadas isoladas e resumos de evidências
 ```
 
